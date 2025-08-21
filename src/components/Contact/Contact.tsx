@@ -85,22 +85,22 @@ const Contact = () => {
                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                   </svg>
                 </div>
-                <h3 className={styles.ctaTitle}>Brauchen Sie Hilfe?</h3>
+                <h3 className={styles.ctaTitle}>{t('contact.ctaTitle')}</h3>
                 <p className={styles.ctaDescription}>
-                  Kontaktieren Sie uns für eine kostenlose Beratung. Wir helfen Ihnen gerne bei allen medizinischen Angelegenheiten weiter.
+                  {t('contact.ctaDescription')}
                 </p>
                 <div className={styles.ctaButtons}>
                   <a 
                     href="tel:+4917684727849" 
                     className={`btn btn-primary ${styles.ctaBtn}`}
                   >
-                    📞 Jetzt anrufen
+                    {t('contact.callNow')}
                   </a>
                   <a 
                     href="mailto:medizinischeassistenzlue@gmail.com" 
-                    className={`btn btn-secondary ${styles.ctaBtn}`}
+                    className={`btn btn-primary ${styles.ctaBtn}`}
                   >
-                    ✉️ Email schreiben
+                    {t('contact.sendEmail')}
                   </a>
                 </div>
               </div>

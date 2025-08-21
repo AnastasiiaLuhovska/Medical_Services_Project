@@ -5,7 +5,7 @@
 // 3. Вставьте код doPost функции (см. инструкцию ниже)
 // 4. Замените SCRIPT_URL на ваш Web App URL
 
-const SCRIPT_URL = 'YOUR_GOOGLE_SCRIPT_WEB_APP_URL'; // Замените на ваш URL
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyO2gytRzKFli-BGFePXbxKkDrvZ6BbymoWxmWiKDLGiEowDkTIy3gHhCzQyvtztrFhNQ/exec'; // Замените на ваш URL
 
 export interface FormSubmission {
   name: string;
@@ -40,8 +40,6 @@ export const submitToGoogleSheets = async (formData: FormSubmission): Promise<bo
       body: JSON.stringify(dataWithTimestamp)
     });
 
-    // Поскольку используется mode: 'no-cors', response.ok не доступен
-    // Считаем отправку успешной, если не было ошибки
     return true;
   } catch (error) {
     console.error('Ошибка отправки в Google Sheets:', error);

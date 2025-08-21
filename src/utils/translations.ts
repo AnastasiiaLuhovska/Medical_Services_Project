@@ -21,18 +21,32 @@ export const translations = {
     'hero.ctaTitle': 'Bereit für Ihren Termin?',
     'hero.ctaDescription': 'Kontaktieren Sie uns für ein unverbindliches Beratungsgespräch',
     'hero.ctaButton': 'Jetzt kontaktieren',
+    'hero.floatingCard1': 'Schnelle Termine',
+    'hero.floatingCard2': 'Medizinische Begleitung',
 
     // About Section
     'about.title': 'Wer ich bin',
     'about.subtitle': 'Ihre medizinische Assistenz',
     'about.description': 'Mein Name ist Yelyzaveta. Ich bin medizinische Fachangestellter mit langjähriger Erfahrung und arbeite eng mit Ärzten zusammen, denen ich vertraue. Durch meine Kenntnisse im medizinischen Bereich kann ich Sie nicht nur bei Terminen unterstützen, sondern auch bei der Organisation, Dokumentation und Kommunikation mit Ärzten und Kliniken. Darüber hinaus helfe ich auch bei allgemeinen Anträgen und Dokumenten, die über den medizinischen Bereich hinausgehen. Meine Stärke ist, komplexe Abläufe einfach und klar zu erklären und Sie Schritt für Schritt zu begleiten.',
     'about.feature1': 'Zuverlässigkeit und Diskretion',
+    'about.feature1.description': 'Ihre persönlichen Daten und medizinischen Informationen sind bei uns sicher.',
     'about.feature2': 'Medizinisches Fachwissen',
+    'about.feature2.description': 'Langjährige Erfahrung im deutschen Gesundheitssystem.',
     'about.feature3': 'Persönliche Begleitung und Unterstützung',
+    'about.feature3.description': 'Wir begleiten Sie zu jedem Termin und übersetzen alles für Sie.',
     'about.feature4': 'Erfahrung mit Dokumenten und Anträgen',
+    'about.feature4.description': 'Hilfe bei komplexen Formularen und Anträgen aller Art.',
     'about.feature5': 'Freundliche und verständliche Kommunikation',
+    'about.feature5.description': 'Wir erklären alles verständlich und nehmen uns Zeit für Sie.',
     'about.feature6': 'Individuelle Betreuung',
+    'about.feature6.description': 'Jeder Kunde erhält individuelle und persönliche Betreuung.',
     'about.learnMore': 'Kontakt aufnehmen',
+    'about.showMore': 'Mehr anzeigen',
+    'about.showLess': 'Weniger anzeigen',
+    'about.stat1Number': '500+',
+    'about.stat1Label': 'Erfolgreiche Termine',
+    'about.stat2Number': '50+',
+    'about.stat2Label': 'Partnerkliniken',
 
     // Services Section
     'services.title': 'Unser Service',
@@ -85,12 +99,35 @@ export const translations = {
     'appointment.messagePlaceholder': 'Beschreiben Sie Ihr Anliegen oder stellen Sie Ihre Fragen...',
     'appointment.submit': 'ANFRAGE SENDEN',
     'appointment.submitting': 'WIRD GESENDET...',
+    
+    // Form validation
+    'validation.nameMin': 'Name muss mindestens 2 Zeichen haben',
+    'validation.nameMax': 'Name darf maximal 50 Zeichen haben',
+    'validation.nameRequired': 'Name ist erforderlich',
+    'validation.emailInvalid': 'Ungültige E-Mail-Adresse',
+    'validation.emailRequired': 'E-Mail ist erforderlich',
+    'validation.phoneInvalid': 'Telefonnummer ist ungültig',
+    'validation.phoneRequired': 'Telefonnummer ist erforderlich',
+    'validation.datePast': 'Datum kann nicht in der Vergangenheit liegen',
+    'validation.dateRequired': 'Datum ist erforderlich',
+    'validation.timeRequired': 'Uhrzeit ist erforderlich',
+    'validation.messageMax': 'Nachricht darf maximal 500 Zeichen haben',
+    
+    // Toast messages
+    'toast.success': 'Anfrage erfolgreich gesendet! Wir melden uns in Kürze bei Ihnen.',
+    'toast.error': 'Es gab einen Fehler beim Senden Ihrer Anfrage. Bitte kontaktieren Sie uns direkt per Email oder Telefon.',
+    'toast.copySuccess': 'Daten wurden in die Zwischenablage kopiert!',
+    'toast.copyConfirm': 'Automatische Übertragung fehlgeschlagen. Möchten Sie die Daten kopieren und manuell per Email senden?',
 
     // Contact Section
     'contact.title': 'Kontaktieren Sie uns',
     'contact.phone': 'Telefon',
     'contact.email': 'E-Mail',
     'contact.getDirections': 'Kontakt aufnehmen',
+    'contact.ctaTitle': 'Brauchen Sie Hilfe?',
+    'contact.ctaDescription': 'Kontaktieren Sie uns für eine kostenlose Beratung. Wir helfen Ihnen gerne bei allen medizinischen Angelegenheiten weiter.',
+    'contact.callNow': '📞 Jetzt anrufen',
+    'contact.sendEmail': '✉️ Email schreiben',
 
     // Footer
     'footer.tagline': 'Ihre vertrauensvolle medizinische Assistenz in Deutschland.',
@@ -103,7 +140,7 @@ export const translations = {
   },
   ru: {
     // Brand
-    'brand.name': 'Медицинская Помощь',
+    'brand.name': 'Медицинская Консультация',
     
     // Navigation
     'nav.about': 'Обо мне',
@@ -121,18 +158,32 @@ export const translations = {
     'hero.ctaTitle': 'Готовы записаться на приём?',
     'hero.ctaDescription': 'Свяжитесь с нами для бесплатной консультации',
     'hero.ctaButton': 'Связаться сейчас',
+    'hero.floatingCard1': 'Быстрая запись',
+    'hero.floatingCard2': 'Медицинское сопровождение',
 
     // About Section
     'about.title': 'Кто я',
     'about.subtitle': 'Ваш медицинский ассистент',
     'about.description': 'Меня зовут Елизавета. Я медицинский специалист с многолетним опытом и тесно работаю с врачами, которым доверяю. Благодаря моим знаниям в медицинской области, я могу поддержать вас не только в записи на прием, но и в организации, документообороте и общении с врачами и клиниками. Кроме того, я также помогаю с общими заявлениями и документами, выходящими за рамки медицинской сферы. Моя сильная сторона - объяснять сложные процессы просто и понятно, сопровождая вас шаг за шагом.',
     'about.feature1': 'Надежность и конфиденциальность',
+    'about.feature1.description': 'Ваши личные данные и медицинская информация в безопасности у нас.',
     'about.feature2': 'Медицинские знания',
+    'about.feature2.description': 'Многолетний опыт работы в немецкой системе здравоохранения.',
     'about.feature3': 'Личное сопровождение и поддержка',
+    'about.feature3.description': 'Мы сопровождаем вас на каждый прием и переводим все для вас.',
     'about.feature4': 'Опыт работы с документами и заявлениями',
+    'about.feature4.description': 'Помощь с комплексными формами и заявлениями всех видов.',
     'about.feature5': 'Дружелюбное и понятное общение',
+    'about.feature5.description': 'Мы объясняем все понятно и находим время для вас.',
     'about.feature6': 'Индивидуальный подход',
+    'about.feature6.description': 'Каждый клиент получает индивидуальную и персональную поддержку.',
     'about.learnMore': 'Связаться',
+    'about.showMore': 'Показать больше',
+    'about.showLess': 'Показать меньше',
+    'about.stat1Number': '500+',
+    'about.stat1Label': 'Успешных записей',
+    'about.stat2Number': '50+',
+    'about.stat2Label': 'Клиник-партнеров',
 
     // Services Section
     'services.title': 'Наши услуги',
@@ -185,12 +236,35 @@ export const translations = {
     'appointment.messagePlaceholder': 'Опишите ваш вопрос или задайте вопросы...',
     'appointment.submit': 'ОТПРАВИТЬ ЗАПРОС',
     'appointment.submitting': 'ОТПРАВЛЯЕТСЯ...',
+    
+    // Form validation
+    'validation.nameMin': 'Имя должно содержать минимум 2 символа',
+    'validation.nameMax': 'Имя должно содержать максимум 50 символов',
+    'validation.nameRequired': 'Имя обязательно',
+    'validation.emailInvalid': 'Неверный адрес электронной почты',
+    'validation.emailRequired': 'Электронная почта обязательна',
+    'validation.phoneInvalid': 'Номер телефона неверен',
+    'validation.phoneRequired': 'Номер телефона обязателен',
+    'validation.datePast': 'Дата не может быть в прошлом',
+    'validation.dateRequired': 'Дата обязательна',
+    'validation.timeRequired': 'Время обязательно',
+    'validation.messageMax': 'Сообщение должно содержать максимум 500 символов',
+    
+    // Toast messages
+    'toast.success': 'Запрос успешно отправлен! Мы свяжемся с вами в ближайшее время.',
+    'toast.error': 'Произошла ошибка при отправке вашего запроса. Пожалуйста, свяжитесь с нами напрямую по электронной почте или телефону.',
+    'toast.copySuccess': 'Данные скопированы в буфер обмена!',
+    'toast.copyConfirm': 'Автоматическая передача не удалась. Хотите скопировать данные и отправить их вручную по электронной почте?',
 
     // Contact Section
     'contact.title': 'Связаться с нами',
     'contact.phone': 'Телефон',
     'contact.email': 'Эл. почта',
     'contact.getDirections': 'Связаться',
+    'contact.ctaTitle': 'Нужна помощь?',
+    'contact.ctaDescription': 'Свяжитесь с нами для бесплатной консультации. Мы будем рады помочь вам во всех медицинских вопросах.',
+    'contact.callNow': '📞 Позвонить сейчас',
+    'contact.sendEmail': '✉️ Написать email',
 
     // Footer
     'footer.tagline': 'Ваш надежный медицинский ассистент в Германии.',
@@ -221,18 +295,32 @@ export const translations = {
     'hero.ctaTitle': 'Ready for your appointment?',
     'hero.ctaDescription': 'Contact us for a non-binding consultation',
     'hero.ctaButton': 'Contact now',
+    'hero.floatingCard1': 'Quick Appointments',
+    'hero.floatingCard2': 'Medical Assistance',
 
     // About Section
     'about.title': 'Who I am',
     'about.subtitle': 'Your medical assistant',
     'about.description': 'My name is Yelyzaveta. I am a medical professional with many years of experience and work closely with doctors I trust. Through my knowledge in the medical field, I can support you not only with appointments, but also with organization, documentation and communication with doctors and clinics. In addition, I also help with general applications and documents that go beyond the medical field. My strength is to explain complex processes simply and clearly and to accompany you step by step.',
     'about.feature1': 'Reliability and discretion',
+    'about.feature1.description': 'Your personal data and medical information are safe with us.',
     'about.feature2': 'Medical expertise',
+    'about.feature2.description': 'Years of experience in the German healthcare system.',
     'about.feature3': 'Personal accompaniment and support',
+    'about.feature3.description': 'We accompany you to every appointment and translate everything for you.',
     'about.feature4': 'Experience with documents and applications',
+    'about.feature4.description': 'Help with complex forms and applications of all kinds.',
     'about.feature5': 'Friendly and understandable communication',
+    'about.feature5.description': 'We explain everything clearly and take time for you.',
     'about.feature6': 'Individual care',
+    'about.feature6.description': 'Every client receives individual and personal support.',
     'about.learnMore': 'Get in touch',
+    'about.showMore': 'Show more',
+    'about.showLess': 'Show less',
+    'about.stat1Number': '500+',
+    'about.stat1Label': 'Successful Appointments',
+    'about.stat2Number': '50+',
+    'about.stat2Label': 'Partner Clinics',
 
     // Services Section
     'services.title': 'Our service',
@@ -285,12 +373,35 @@ export const translations = {
     'appointment.messagePlaceholder': 'Describe your concern or ask your questions...',
     'appointment.submit': 'SEND REQUEST',
     'appointment.submitting': 'SENDING...',
+    
+    // Form validation
+    'validation.nameMin': 'Name must be at least 2 characters',
+    'validation.nameMax': 'Name must be less than 50 characters',
+    'validation.nameRequired': 'Name is required',
+    'validation.emailInvalid': 'Invalid email address',
+    'validation.emailRequired': 'Email is required',
+    'validation.phoneInvalid': 'Phone number is invalid',
+    'validation.phoneRequired': 'Phone number is required',
+    'validation.datePast': 'Date cannot be in the past',
+    'validation.dateRequired': 'Date is required',
+    'validation.timeRequired': 'Time is required',
+    'validation.messageMax': 'Message must be less than 500 characters',
+    
+    // Toast messages
+    'toast.success': 'Request sent successfully! We will contact you shortly.',
+    'toast.error': 'There was an error sending your request. Please contact us directly via email or phone.',
+    'toast.copySuccess': 'Data has been copied to clipboard!',
+    'toast.copyConfirm': 'Automatic transfer failed. Do you want to copy the data and send it manually via email?',
 
     // Contact Section
     'contact.title': 'Contact us',
     'contact.phone': 'Phone',
     'contact.email': 'Email',
     'contact.getDirections': 'Get in touch',
+    'contact.ctaTitle': 'Need help?',
+    'contact.ctaDescription': 'Contact us for a free consultation. We are happy to help you with all medical matters.',
+    'contact.callNow': '📞 Call now',
+    'contact.sendEmail': '✉️ Send email',
 
     // Footer
     'footer.tagline': 'Your trusted medical assistant in Germany.',

@@ -1,38 +1,40 @@
+import { useState } from 'react'
 import styles from './About.module.css'
 import { useTranslation } from '../../hooks/useTranslation'
 
 const About = () => {
   const { t } = useTranslation()
+  const [showAllFeatures, setShowAllFeatures] = useState(false)
   const features = [
     {
-      iconSvg: '/src/assets/images/12.svg',
+      icon: '🔒',
       title: t('about.feature1'),
-      description: 'Ihre persönlichen Daten und medizinischen Informationen sind bei uns sicher.'
+      description: t('about.feature1.description')
     },
     {
-      iconSvg: '/src/assets/icons/icon.svg',
+      icon: '🎓',
       title: t('about.feature2'),
-      description: 'Langjährige Erfahrung im deutschen Gesundheitssystem.'
+      description: t('about.feature2.description')
     },
     {
-      iconSvg: '/src/assets/images/4.svg',
+      icon: '🤝',
       title: t('about.feature3'),
-      description: 'Wir begleiten Sie zu jedem Termin und übersetzen alles für Sie.'
+      description: t('about.feature3.description')
     },
     {
-      iconSvg: '/src/assets/images/6.svg',
+      icon: '📝',
       title: t('about.feature4'),
-      description: 'Hilfe bei komplexen Formularen und Anträgen aller Art.'
+      description: t('about.feature4.description')
     },
     {
-      iconSvg: '/src/assets/images/5.svg',
+      icon: '💬',
       title: t('about.feature5'),
-      description: 'Wir erklären alles verständlich und nehmen uns Zeit für Sie.'
+      description: t('about.feature5.description')
     },
     {
-      iconSvg: '/src/assets/images/7.svg',
+      icon: '⭐',
       title: t('about.feature6'),
-      description: 'Jeder Kunde erhält individuelle und persönliche Betreuung.'
+      description: t('about.feature6.description')
     }
   ]
 
@@ -51,14 +53,10 @@ const About = () => {
             </p>
             
             <div className={styles.features}>
-              {features.map((feature, index) => (
+              {features.slice(0, showAllFeatures ? features.length : 3).map((feature, index) => (
                 <div key={index} className={styles.feature}>
                   <div className={styles.featureIcon}>
-                    <img 
-                      src={feature.iconSvg} 
-                      alt={feature.title}
-                      className={styles.featureIconImage}
-                    />
+                    <span className={styles.featureIconEmoji}>{feature.icon}</span>
                   </div>
                   <div className={styles.featureContent}>
                     <h3 className={styles.featureTitle}>{feature.title}</h3>
@@ -67,6 +65,16 @@ const About = () => {
                 </div>
               ))}
             </div>
+            
+            <button 
+              className={`${styles.readMoreBtn} ${showAllFeatures ? styles.expanded : ''}`}
+              onClick={() => setShowAllFeatures(!showAllFeatures)}
+            >
+              {showAllFeatures ? t('about.showLess') : t('about.showMore')}
+              <span className={styles.readMoreIcon}>
+                {showAllFeatures ? '−' : '+'}
+              </span>
+            </button>
             
             <button 
               className="btn btn-primary"
@@ -79,38 +87,21 @@ const About = () => {
           <div className={styles.aboutImage} data-animate="fade-left">
             <div className={styles.imageContainer}>
               <div className={styles.doctorsPlaceholder}>
-                <svg viewBox="0 0 500 600" className={styles.doctorsSvg}>
-                  <defs>
-                    <linearGradient id="aboutGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="var(--light-blue)" />
-                      <stop offset="100%" stopColor="var(--primary-blue)" />
-                    </linearGradient>
-                  </defs>
-                  <rect width="500" height="600" fill="url(#aboutGradient)" rx="25" />
-                  
-                  <circle cx="180" cy="180" r="50" fill="var(--white)" opacity="0.9" />
-                  <circle cx="320" cy="160" r="45" fill="var(--white)" opacity="0.8" />
-                  
-                  <rect x="130" y="240" width="100" height="180" fill="var(--white)" opacity="0.7" rx="10" />
-                  <rect x="275" y="220" width="90" height="170" fill="var(--white)" opacity="0.6" rx="10" />
-                  
-                  <circle cx="160" cy="300" r="20" fill="var(--accent-blue)" opacity="0.8" />
-                  <circle cx="305" cy="280" r="18" fill="var(--accent-blue)" opacity="0.7" />
-                  
-                  <text x="250" y="520" textAnchor="middle" fill="var(--white)" fontSize="18" fontWeight="bold">
-                    Medical Professionals
-                  </text>
-                </svg>
+                <img 
+                  src="/src/assets/images/2.jpg"
+                  alt="Medical Professional"
+                  className={styles.doctorsSvg}
+                />
               </div>
               
               <div className={styles.statsCard}>
                 <div className={styles.stat}>
-                  <div className={styles.statNumber}>500+</div>
-                  <div className={styles.statLabel}>Erfolgreiche Termine</div>
+                  <div className={styles.statNumber}>{t('about.stat1Number')}</div>
+                  <div className={styles.statLabel}>{t('about.stat1Label')}</div>
                 </div>
                 <div className={styles.stat}>
-                  <div className={styles.statNumber}>50+</div>
-                  <div className={styles.statLabel}>Partnerkliniken</div>
+                  <div className={styles.statNumber}>{t('about.stat2Number')}</div>
+                  <div className={styles.statLabel}>{t('about.stat2Label')}</div>
                 </div>
               </div>
             </div>

@@ -8,49 +8,57 @@ const Services = () => {
       id: 1,
       title: t('services.service1.title'),
       description: t('services.service1.description'),
-      iconSvg: '/src/assets/images/4.svg'
+      icon: '📅',
+      image: '/src/assets/images/3.jpg'
     },
     {
       id: 2,
       title: t('services.service2.title'),
       description: t('services.service2.description'),
-      iconSvg: '/src/assets/images/5.svg'
+      icon: '🌐',
+      image: '/src/assets/images/4.png'
     },
     {
       id: 3,
       title: t('services.service3.title'),
       description: t('services.service3.description'),
-      iconSvg: '/src/assets/images/6.svg'
+      icon: '📋',
+      image: '/src/assets/images/5.png'
     },
     {
       id: 4,
       title: t('services.service4.title'),
       description: t('services.service4.description'),
-      iconSvg: '/src/assets/images/7.svg'
+      icon: '🩺',
+      image: '/src/assets/images/6.png'
     },
     {
       id: 5,
       title: t('services.service5.title'),
       description: t('services.service5.description'),
-      iconSvg: '/src/assets/images/8.svg'
+      icon: '🚑',
+      image: '/src/assets/images/7.png'
     },
     {
       id: 6,
       title: t('services.service6.title'),
       description: t('services.service6.description'),
-      iconSvg: '/src/assets/images/9.svg'
+      icon: '👨‍⚕️',
+      image: '/src/assets/images/8.png'
     },
     {
       id: 7,
       title: t('services.service7.title'),
       description: t('services.service7.description'),
-      iconSvg: '/src/assets/images/10.svg'
+      icon: '💬',
+      image: '/src/assets/images/9.jpg'
     },
     {
       id: 8,
       title: t('services.service8.title'),
       description: t('services.service8.description'),
-      iconSvg: '/src/assets/images/11.svg'
+      icon: '📞',
+      image: '/src/assets/images/10.png'
     }
   ]
 
@@ -72,35 +80,17 @@ const Services = () => {
             >
               <div className={styles.serviceImage}>
                 <div className={styles.servicePlaceholder}>
-                  <svg viewBox="0 0 300 200" className={styles.serviceSvg}>
-                    <defs>
-                      <linearGradient id={`serviceGradient${service.id}`} x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="var(--light-blue)" />
-                        <stop offset="100%" stopColor="var(--accent-blue)" />
-                      </linearGradient>
-                    </defs>
-                    <rect width="300" height="200" fill={`url(#serviceGradient${service.id})`} rx="10" />
-                    
-                    <circle cx="150" cy="80" r="30" fill="var(--white)" opacity="0.9" />
-                    <rect x="120" y="120" width="60" height="50" fill="var(--white)" opacity="0.8" rx="5" />
-                    
-                    <circle cx="140" cy="140" r="12" fill="var(--primary-blue)" opacity="0.7" />
-                    <circle cx="160" cy="140" r="12" fill="var(--primary-blue)" opacity="0.7" />
-                    
-                    <text x="150" y="190" textAnchor="middle" fill="var(--white)" fontSize="12" fontWeight="bold">
-                      Medical Care
-                    </text>
-                  </svg>
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className={styles.serviceSvg}
+                  />
                 </div>
               </div>
               
               <div className={styles.serviceContent}>
                 <div className={styles.serviceIcon}>
-                  <img 
-                    src={service.iconSvg} 
-                    alt={service.title}
-                    className={styles.serviceIconImage}
-                  />
+                  <span className={styles.serviceIconEmoji}>{service.icon}</span>
                 </div>
                 
                 <h3 className={styles.serviceTitle}>{service.title}</h3>

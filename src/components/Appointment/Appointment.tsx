@@ -2,6 +2,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import styles from './Appointment.module.css'
 import { useTranslation } from '../../hooks/useTranslation'
+import { useToast } from '../../contexts/ToastContext'
 import { submitToGoogleSheets } from '../../utils/googleSheets'
 
 interface SimplifiedAppointmentFormData {
@@ -15,6 +16,7 @@ interface SimplifiedAppointmentFormData {
 
 const Appointment = () => {
   const { t } = useTranslation()
+  const { showToast } = useToast()
   const initialValues: SimplifiedAppointmentFormData = {
     name: '',
     email: '',
@@ -26,22 +28,22 @@ const Appointment = () => {
 
   const validationSchema = Yup.object({
     name: Yup.string()
-      .min(2, 'Name must be at least 2 characters')
-      .max(50, 'Name must be less than 50 characters')
-      .required('Name is required'),
+      .min(2, t('validation.nameMin'))
+      .max(50, t('validation.nameMax'))
+      .required(t('validation.nameRequired')),
     email: Yup.string()
-      .email('Invalid email address')
-      .required('Email is required'),
+      .email(t('validation.emailInvalid'))
+      .required(t('validation.emailRequired')),
     phone: Yup.string()
-      .matches(/^[\+]?[0-9\s\-\(\)]+$/, 'Phone number is invalid')
-      .required('Phone number is required'),
+      .matches(/^[\+]?[0-9\s\-\(\)]+$/, t('validation.phoneInvalid'))
+      .required(t('validation.phoneRequired')),
     date: Yup.date()
-      .min(new Date(), 'Date cannot be in the past')
-      .required('Date is required'),
+      .min(new Date(), t('validation.datePast'))
+      .required(t('validation.dateRequired')),
     time: Yup.string()
-      .required('Time is required'),
+      .required(t('validation.timeRequired')),
     message: Yup.string()
-      .max(500, 'Message must be less than 500 characters')
+      .max(500, t('validation.messageMax'))
   })
 
 
@@ -61,10 +63,9 @@ const Appointment = () => {
       const success = await submitToGoogleSheets(values)
       
       if (success) {
-        alert('✅ Anfrage erfolgreich gesendet! Wir melden uns in Kürze bei Ihnen.')
+        showToast(t('toast.success'), 'success')
         resetForm()
       } else {
-        // Fallback: показываем данные пользователю для ручной отправки
         const formattedData = `
 Name: ${values.name}
 Email: ${values.email}
@@ -76,14 +77,14 @@ Nachricht: ${values.message}
 Bitte senden Sie diese Daten per Email an: medizinischeassistenzlue@gmail.com
         `
         
-        if (confirm('⚠️ Automatische Übertragung fehlgeschlagen. Möchten Sie die Daten kopieren und manuell per Email senden?')) {
+        if (confirm(t('toast.copyConfirm'))) {
           navigator.clipboard.writeText(formattedData)
-          alert('📋 Daten wurden in die Zwischenablage kopiert!')
+          showToast(t('toast.copySuccess'), 'info')
         }
       }
     } catch (error) {
       console.error('Error submitting form:', error)
-      alert('❌ Es gab einen Fehler beim Senden Ihrer Anfrage. Bitte kontaktieren Sie uns direkt per Email oder Telefon.')
+      showToast(t('toast.error'), 'error')
     } finally {
       setSubmitting(false)
     }

@@ -6,9 +6,9 @@ const LanguageSwitcher = () => {
   const { language, changeLanguage } = useTranslation()
 
   const languages: { code: Language; label: string }[] = [
-    { code: 'de', label: 'Deutsch' },
-    { code: 'ru', label: 'Русский' },
-    { code: 'en', label: 'English' }
+    { code: 'de', label: 'DE' },
+    { code: 'ru', label: 'RU' },
+    { code: 'en', label: 'EN' }
   ]
 
   return (

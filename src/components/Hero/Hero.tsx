@@ -39,36 +39,26 @@ const Hero = () => {
               </button>
             </div>
           </div>
-          
+            
           <div className={styles.heroImage}>
             <div className={styles.imageContainer}>
               <div className={styles.doctorPlaceholder}>
-                <svg viewBox="0 0 400 500" className={styles.doctorSvg}>
-                  <defs>
-                    <linearGradient id="doctorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="var(--light-blue)" />
-                      <stop offset="100%" stopColor="var(--accent-blue)" />
-                    </linearGradient>
-                  </defs>
-                  <rect width="400" height="500" fill="url(#doctorGradient)" rx="20" />
-                  <circle cx="200" cy="150" r="60" fill="var(--white)" opacity="0.9" />
-                  <rect x="150" y="220" width="100" height="200" fill="var(--white)" opacity="0.8" rx="10" />
-                  <circle cx="180" cy="280" r="25" fill="var(--primary-blue)" opacity="0.7" />
-                  <text x="200" y="450" textAnchor="middle" fill="var(--white)" fontSize="16" fontWeight="bold">
-                    Healthcare Professional
-                  </text>
-                </svg>
+                <img 
+                  src="/src/assets/images/1.png"
+                  alt="Medical Services" 
+                  className={styles.doctorSvg}
+                />
               </div>
               
               <div className={styles.floatingCards}>
                 <div className={`${styles.floatingCard} ${styles.cardTop}`}>
                   <div className={styles.cardIcon}>📞</div>
-                  <span>Schnelle Termine</span>
+                  <span>{t('hero.floatingCard1')}</span>
                 </div>
                 
                 <div className={`${styles.floatingCard} ${styles.cardBottom}`}>
                   <div className={styles.cardIcon}>🩺</div>
-                  <span>Medizinische Begleitung</span>
+                  <span>{t('hero.floatingCard2')}</span>
                 </div>
               </div>
             </div>

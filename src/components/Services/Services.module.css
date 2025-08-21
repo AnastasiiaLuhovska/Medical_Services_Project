@@ -77,15 +77,12 @@
   overflow: hidden;
 }
 
-.serviceIconImage {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  filter: brightness(0) saturate(100%) invert(28%) sepia(98%) saturate(1189%) hue-rotate(207deg) brightness(94%) contrast(93%);
-  transition: all 0.3s ease;
+.serviceIconEmoji {
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
-.serviceCard:hover .serviceIconImage {
+.serviceCard:hover .serviceIconEmoji {
   transform: scale(1.1);
 }
 

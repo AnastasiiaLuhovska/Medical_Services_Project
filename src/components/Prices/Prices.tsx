@@ -96,15 +96,15 @@ const Prices = () => {
           </div>
           
           <div className={styles.ctaSection} data-animate>
-            <h3 className={styles.ctaTitle}>Bereit für Ihren Termin?</h3>
+            <h3 className={styles.ctaTitle}>{t('hero.ctaTitle')}</h3>
             <p className={styles.ctaText}>
-              Kontaktieren Sie uns für ein unverbindliches Beratungsgespräch
+              {t('hero.ctaDescription')}
             </p>
             <button 
               className={`btn btn-primary ${styles.ctaButton}`}
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Jetzt kontaktieren
+              {t('hero.ctaButton')}
             </button>
           </div>
         </div>
