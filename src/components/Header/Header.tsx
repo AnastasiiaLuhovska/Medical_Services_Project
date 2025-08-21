@@ -42,7 +42,7 @@ const Header = () => {
           <div className={styles.logo} onClick={handleLogoClick}>
             <div className={styles.logoIcon}>
               <img 
-                src="/assets/icons/icon.svg"
+                src="/icons/icon.svg"
                 alt="Medical Assistance Icon" 
                 className={styles.iconImage}
               />

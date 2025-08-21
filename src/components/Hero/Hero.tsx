@@ -44,7 +44,7 @@ const Hero = () => {
             <div className={styles.imageContainer}>
               <div className={styles.doctorPlaceholder}>
                 <img 
-                  src="/assets/images/1.png"
+                  src="/images/1.png"
                   alt="Medical Services" 
                   className={styles.doctorSvg}
                 />
