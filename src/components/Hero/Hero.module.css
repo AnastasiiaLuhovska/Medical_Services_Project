@@ -1,0 +1,249 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #f8fbff 0%, #e8f4fd 100%);
+  padding-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e0e7ff" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.5;
+}
+
+.heroContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.heroText {
+  animation: slideInLeft 1s ease-out;
+}
+
+.heroSubtitle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.accent {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--primary-blue);
+  margin-bottom: 1.5rem;
+}
+
+.heroDescription {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-gray);
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.heroImage {
+  display: flex;
+  justify-content: center;
+  animation: slideInRight 1s ease-out;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.doctorPlaceholder {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(46, 72, 148, 0.3);
+}
+
+.doctorSvg {
+  width: 100%;
+  height: auto;
+}
+
+.floatingCards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.floatingCard {
+  position: absolute;
+  background: var(--white);
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  animation: float 3s ease-in-out infinite;
+}
+
+.cardTop {
+  top: 20%;
+  right: -10%;
+  animation-delay: -1s;
+}
+
+.cardBottom {
+  bottom: 25%;
+  left: -15%;
+  animation-delay: -2s;
+}
+
+.cardIcon {
+  width: 40px;
+  height: 40px;
+  background: var(--accent-blue);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 1023px) {
+  .heroTitle {
+    font-size: 3rem;
+  }
+  
+  .heroContent {
+    gap: 3rem;
+  }
+  
+  .cardTop {
+    right: -5%;
+  }
+  
+  .cardBottom {
+    left: -10%;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    min-height: auto;
+    padding: 100px 0 4rem;
+  }
+
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroDescription {
+    font-size: 1rem;
+  }
+
+  .heroButtons {
+    justify-content: center;
+  }
+
+  .floatingCard {
+    display: none;
+  }
+
+  .imageContainer {
+    order: -1;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroButtons .btn {
+    width: 200px;
+  }
+}

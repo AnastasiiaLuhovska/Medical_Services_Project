@@ -1,0 +1,259 @@
+.about {
+  background-color: var(--white);
+  position: relative;
+}
+
+.aboutContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.aboutText {
+  animation: fadeInUp 1s ease-out;
+}
+
+.aboutDescription {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-gray);
+  margin-bottom: 2.5rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.feature:hover {
+  background-color: #f8fbff;
+  transform: translateY(-2px);
+}
+
+.featureIcon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--accent-blue), var(--primary-blue));
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.featureIconImage {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: all 0.3s ease;
+}
+
+.feature:hover .featureIcon {
+  transform: scale(1.1);
+}
+
+.feature:hover .featureIconImage {
+  transform: rotate(5deg);
+}
+
+.featureContent {
+  flex: 1;
+}
+
+.featureTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: 0.25rem;
+}
+
+.featureDescription {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-gray);
+}
+
+.aboutImage {
+  display: flex;
+  justify-content: center;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+}
+
+.doctorsPlaceholder {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(46, 72, 148, 0.25);
+}
+
+.doctorsSvg {
+  width: 100%;
+  height: auto;
+}
+
+.statsCard {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 2rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--primary-blue);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1023px) {
+  .aboutContent {
+    gap: 3rem;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+  }
+  
+  .statsCard {
+    bottom: -15px;
+    right: -15px;
+    padding: 1.25rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .aboutContent {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .aboutImage {
+    order: -1;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .feature {
+    text-align: left;
+    padding: 0.75rem;
+  }
+
+  .featureIcon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.125rem;
+  }
+  
+  .featureIconImage {
+    width: 23px;
+    height: 23px;
+  }
+
+  .imageContainer {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .statsCard {
+    position: static;
+    margin-top: 1rem;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .features {
+    gap: 0.75rem;
+  }
+
+  .feature {
+    padding: 0.5rem;
+  }
+
+  .featureIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .featureIconImage {
+    width: 20px;
+    height: 20px;
+  }
+
+  .featureTitle {
+    font-size: 0.9rem;
+  }
+
+  .featureDescription {
+    font-size: 0.8rem;
+  }
+
+  .statsCard {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .statNumber {
+    font-size: 1.5rem;
+  }
+}

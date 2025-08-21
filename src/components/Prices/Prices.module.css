@@ -1,0 +1,309 @@
+.prices {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+  position: relative;
+}
+
+.prices::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="money-pattern" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1.5" fill="%23e0e7ff" opacity="0.4"/><text x="20" y="25" text-anchor="middle" font-size="8" fill="%23e0e7ff" opacity="0.3">€</text></pattern></defs><rect width="100" height="100" fill="url(%23money-pattern)"/></svg>');
+  opacity: 0.5;
+}
+
+.pricesContainer {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pricesTable {
+  background: var(--white);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(46, 72, 148, 0.15);
+  margin-bottom: 2rem;
+  border: 1px solid rgba(46, 72, 148, 0.1);
+}
+
+.tableHeader {
+  background: linear-gradient(135deg, var(--primary-blue), #1e3a80);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 0;
+}
+
+.headerCell {
+  padding: 1.5rem 2rem;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.headerCell:first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.headerIcon {
+  font-size: 1.25rem;
+}
+
+.tableBody {
+  background: var(--white);
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  border-bottom: 1px solid rgba(46, 72, 148, 0.1);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.tableRow:hover {
+  background: rgba(46, 72, 148, 0.03);
+  transform: translateX(5px);
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.serviceCell {
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-right: 1px solid rgba(46, 72, 148, 0.1);
+}
+
+.serviceIcon {
+  font-size: 1.5rem;
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, var(--light-blue), var(--accent-blue));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.serviceName {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 1rem;
+}
+
+.priceCell {
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.priceValue {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary-blue);
+  background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.priceNote {
+  background: rgba(0, 191, 255, 0.1);
+  border: 1px solid rgba(0, 191, 255, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.noteIcon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.noteText {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ctaSection {
+  background: linear-gradient(135deg, var(--primary-blue), #1e3a80);
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: var(--white);
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.ctaTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.ctaText {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.ctaButton {
+  background: var(--white);
+  color: var(--primary-blue);
+  border: none;
+  font-weight: 600;
+}
+
+.ctaButton:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1023px) {
+  .headerCell,
+  .serviceCell,
+  .priceCell {
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .serviceName {
+    font-size: 0.9rem;
+  }
+  
+  .priceValue {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .pricesTable {
+    margin: 0 1rem 2rem;
+  }
+  
+  .tableHeader,
+  .tableRow {
+    grid-template-columns: 1fr;
+  }
+  
+  .headerCell:first-child,
+  .serviceCell {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .headerCell,
+  .serviceCell,
+  .priceCell {
+    padding: 1rem 1.5rem;
+  }
+  
+  .serviceIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+  
+  .serviceName {
+    font-size: 0.875rem;
+  }
+  
+  .priceCell {
+    justify-content: flex-start;
+    background: rgba(46, 72, 148, 0.05);
+  }
+  
+  .priceValue {
+    font-size: 1.125rem;
+  }
+  
+  .priceNote {
+    margin: 0 1rem 2rem;
+    padding: 1.25rem;
+  }
+  
+  .ctaSection {
+    margin: 0 1rem;
+    padding: 2rem 1.5rem;
+  }
+  
+  .ctaTitle {
+    font-size: 1.25rem;
+  }
+  
+  .ctaText {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerCell,
+  .serviceCell,
+  .priceCell {
+    padding: 0.875rem 1rem;
+  }
+  
+  .serviceIcon {
+    width: 35px;
+    height: 35px;
+    font-size: 1.125rem;
+  }
+  
+  .serviceName {
+    font-size: 0.8rem;
+  }
+  
+  .priceValue {
+    font-size: 1rem;
+  }
+  
+  .headerCell {
+    font-size: 1rem;
+  }
+  
+  .priceNote {
+    padding: 1rem;
+  }
+  
+  .noteText {
+    font-size: 0.85rem;
+  }
+  
+  .ctaSection {
+    padding: 1.5rem 1rem;
+  }
+  
+  .ctaTitle {
+    font-size: 1.125rem;
+  }
+}

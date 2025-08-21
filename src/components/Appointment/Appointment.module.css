@@ -1,0 +1,217 @@
+.appointment {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #1e3a80 100%);
+  color: var(--white);
+  position: relative;
+}
+
+.appointment::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="medical-pattern" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="rgba(255,255,255,0.1)"/><rect x="23" y="15" width="4" height="20" fill="rgba(255,255,255,0.05)"/><rect x="15" y="23" width="20" height="4" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23medical-pattern)"/></svg>');
+  opacity: 0.3;
+}
+
+.appointmentContent {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.appointmentForm {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.formGrid .formGroup:nth-child(3) {
+  grid-column: span 1;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  width: 100%;
+  padding: 0.875rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.formInput::placeholder,
+.formTextarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.formInput:focus,
+.formSelect:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.3);
+}
+
+.formSelect {
+  cursor: pointer;
+}
+
+.formSelect option {
+  background: var(--primary-blue);
+  color: var(--white);
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.errorMessage {
+  font-size: 0.8rem;
+  color: #ff6b6b;
+  margin-top: 0.25rem;
+  background: rgba(255, 107, 107, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border-left: 3px solid #ff6b6b;
+}
+
+.submitContainer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.submitBtn {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: var(--accent-blue);
+  border: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: #0099cc;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 191, 255, 0.4);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 1023px) {
+  .appointmentForm {
+    padding: 2.5rem 2rem;
+  }
+  
+  .formGrid {
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .appointmentForm {
+    padding: 2rem 1.5rem;
+    margin: 0 1rem;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .formInput,
+  .formSelect,
+  .formTextarea {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .formLabel {
+    font-size: 0.875rem;
+  }
+
+  .submitBtn {
+    padding: 0.875rem 2.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .appointmentForm {
+    padding: 1.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 1rem;
+  }
+
+  .formInput,
+  .formSelect,
+  .formTextarea {
+    padding: 0.625rem;
+    font-size: 0.8rem;
+  }
+
+  .formLabel {
+    font-size: 0.8rem;
+  }
+
+  .errorMessage {
+    font-size: 0.75rem;
+  }
+
+  .submitBtn {
+    padding: 0.75rem 2rem;
+    font-size: 0.875rem;
+  }
+}
+
+.appointment .section-heading {
+  color: var(--white);
+}
+
+input[type="date"] {
+  color-scheme: dark;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
