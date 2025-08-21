@@ -299,8 +299,12 @@
 @media (min-width: 375px) and (max-width: 767px) {
   .aboutContent {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 3rem;
     text-align: center;
+  }
+  
+  .aboutText {
+    margin-bottom: 2rem;
   }
 
   .aboutImage {

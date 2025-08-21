@@ -204,7 +204,7 @@
 }
 
 .appointment .section-heading {
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 input[type="date"] {
