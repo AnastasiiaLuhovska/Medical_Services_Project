@@ -9,56 +9,56 @@ const Services = () => {
       title: t('services.service1.title'),
       description: t('services.service1.description'),
       icon: '📅',
-      image: '/src/assets/images/3.jpg'
+      image: '/assets/images/3.jpg'
     },
     {
       id: 2,
       title: t('services.service2.title'),
       description: t('services.service2.description'),
       icon: '🌐',
-      image: '/src/assets/images/4.png'
+      image: '/assets/images/4.png'
     },
     {
       id: 3,
       title: t('services.service3.title'),
       description: t('services.service3.description'),
       icon: '📋',
-      image: '/src/assets/images/5.png'
+      image: '/assets/images/5.png'
     },
     {
       id: 4,
       title: t('services.service4.title'),
       description: t('services.service4.description'),
       icon: '🩺',
-      image: '/src/assets/images/6.png'
+      image: '/assets/images/6.png'
     },
     {
       id: 5,
       title: t('services.service5.title'),
       description: t('services.service5.description'),
       icon: '🚑',
-      image: '/src/assets/images/7.png'
+      image: '/assets/images/7.png'
     },
     {
       id: 6,
       title: t('services.service6.title'),
       description: t('services.service6.description'),
       icon: '👨‍⚕️',
-      image: '/src/assets/images/8.png'
+      image: '/assets/images/8.png'
     },
     {
       id: 7,
       title: t('services.service7.title'),
       description: t('services.service7.description'),
       icon: '💬',
-      image: '/src/assets/images/9.jpg'
+      image: '/assets/images/9.jpg'
     },
     {
       id: 8,
       title: t('services.service8.title'),
       description: t('services.service8.description'),
       icon: '📞',
-      image: '/src/assets/images/10.png'
+      image: '/assets/images/10.png'
     }
   ]
 
