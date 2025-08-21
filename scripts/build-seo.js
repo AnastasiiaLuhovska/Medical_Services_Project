@@ -11,7 +11,7 @@ const baseTemplate = `<!doctype html>
 <html lang="{{LANG}}">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/assets/icons/medical-icon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{TITLE}}</title>
     <meta name="description" content="{{DESCRIPTION}}" />
@@ -42,12 +42,25 @@ function generateLanguagePages() {
     return
   }
 
+  // Read the original built index.html to get the correct asset paths
+  const originalIndexPath = path.join(distDir, 'index.html')
+  const originalHtml = fs.readFileSync(originalIndexPath, 'utf8')
+  
+  // Extract script and CSS links from the original built file
+  const scriptMatch = originalHtml.match(/<script[^>]*src="([^"]*)"[^>]*><\/script>/)
+  const cssMatch = originalHtml.match(/<link[^>]*href="([^"]*\.css)"[^>]*>/)
+  
+  const scriptSrc = scriptMatch ? scriptMatch[1] : '/assets/index.js'
+  const cssSrc = cssMatch ? cssMatch[1] : '/assets/index.css'
+
   languages.forEach(lang => {
     const htmlContent = baseTemplate
       .replace(/{{LANG}}/g, lang.code)
       .replace(/{{TITLE}}/g, lang.title)
       .replace(/{{DESCRIPTION}}/g, lang.description)
       .replace(/{{URL}}/g, lang.path)
+      .replace('/assets/index.js', scriptSrc)
+      .replace('/assets/index.css', cssSrc)
 
     if (lang.code === 'de') {
       // Update the main index.html
