@@ -88,7 +88,7 @@ const About = () => {
             <div className={styles.imageContainer}>
               <div className={styles.doctorsPlaceholder}>
                 <img 
-                  src="./src/assets/images/2.jpg"
+                  src="/src/assets/images/2.jpg"
                   alt="Medical Professional"
                   className={styles.doctorsSvg}
                 />
