@@ -9,7 +9,7 @@ const Footer = () => {
         <div className={styles.footerContent}>
           <div className={styles.footerSection}>
             <div className={styles.logo}>
-              <h3 className={styles.logoText}>Medizinische Assistenz</h3>
+              <h3 className={styles.logoText}>LÜ Medizinische Assistenz</h3>
               <p className={styles.tagline}>
                 {t('footer.tagline')}
               </p>

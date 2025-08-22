@@ -232,7 +232,23 @@
   .imageContainer {
     order: -1;
     max-width: 320px;
+    min-width: 280px;
+    height: 380px;
     margin: 0 auto;
+  }
+  
+  .doctorPlaceholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .doctorSvg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -248,5 +264,11 @@
 
   .heroButtons .btn {
     width: 200px;
+  }
+  
+  .imageContainer {
+    max-width: 280px;
+    min-width: 250px;
+    height: 350px;
   }
 }

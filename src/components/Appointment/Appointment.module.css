@@ -161,10 +161,19 @@
   .formTextarea {
     padding: 0.75rem;
     font-size: 0.875rem;
+    color: var(--white) !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 2px solid rgba(255, 255, 255, 0.4) !important;
+  }
+
+  .formInput::placeholder,
+  .formTextarea::placeholder {
+    color: rgba(255, 255, 255, 0.8) !important;
   }
 
   .formLabel {
     font-size: 0.875rem;
+    color: var(--white) !important;
   }
 
   .submitBtn {
@@ -187,10 +196,19 @@
   .formTextarea {
     padding: 0.625rem;
     font-size: 0.8rem;
+    color: var(--white) !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 2px solid rgba(255, 255, 255, 0.4) !important;
+  }
+
+  .formInput::placeholder,
+  .formTextarea::placeholder {
+    color: rgba(255, 255, 255, 0.8) !important;
   }
 
   .formLabel {
     font-size: 0.8rem;
+    color: var(--white) !important;
   }
 
   .errorMessage {
