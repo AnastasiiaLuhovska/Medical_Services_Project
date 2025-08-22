@@ -94,7 +94,7 @@ Bitte senden Sie diese Daten per Email an: medizinischeassistenzlue@gmail.com
     <section id="appointment" className={`${styles.appointment} section`}>
       <div className="container">
         <div className="section-title">
-          <h2 className="section-heading">{t('appointment.title')}</h2>
+          <h2 className={`section-heading ${styles.appointmentTitle}`}>{t('appointment.title')}</h2>
         </div>
         
         <div className={styles.appointmentContent}>

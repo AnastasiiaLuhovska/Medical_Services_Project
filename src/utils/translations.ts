@@ -82,7 +82,7 @@ export const translations = {
     'prices.hausarzt': '€20,00',
     'prices.vorgespraeche': '€50,00',
     'prices.telefonisch': '€2,00',
-    'prices.note': 'PAYMENT METHOD: Überweisung, Barzahlung',
+    'prices.note': 'ZAHLUNGSMETHODEN: Überweisung, Barzahlung',
 
     // Appointment Form
     'appointment.title': 'Termin buchen',
