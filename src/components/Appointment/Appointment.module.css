@@ -241,6 +241,26 @@ section.appointment .section-heading {
   color: var(--white) !important;
 }
 
+section#appointment .section-heading {
+  color: var(--white) !important;
+}
+
+section#appointment h2 {
+  color: var(--white) !important;
+}
+
+.appointment h2.section-heading {
+  color: var(--white) !important;
+}
+
+#appointment .section-heading {
+  color: var(--white) !important;
+}
+
+#appointment h2 {
+  color: var(--white) !important;
+}
+
 input[type="date"] {
   color-scheme: dark;
 }
