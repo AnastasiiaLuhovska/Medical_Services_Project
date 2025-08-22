@@ -103,7 +103,7 @@ Bitte senden Sie diese Daten per Email an: medizinischeassistenzlue@gmail.com
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
           >
-            {({ isSubmitting, values, touched, isValid }) => {
+            {({ isSubmitting, values, isValid }) => {
               const isFormReady = values.name && values.email && values.phone && isValid
               return (
                 <Form className={styles.appointmentForm}>
