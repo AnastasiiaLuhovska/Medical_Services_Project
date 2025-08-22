@@ -309,6 +309,7 @@
 
   .aboutImage {
     order: -1;
+    margin-bottom: 3rem;
   }
 
   .features {
@@ -367,6 +368,7 @@
 
   .aboutImage {
     order: -1;
+    margin-bottom: 2rem;
   }
 
   .features {

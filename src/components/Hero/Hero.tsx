@@ -12,12 +12,12 @@ const Hero = () => {
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
             <div className={styles.heroSubtitle}>
-              <span className={styles.subtitle}>{t('hero.title')}</span>
+              <span className={styles.subtitle}>{t('brand.name')}</span>
               <span className={styles.accent}>{t('hero.subtitle')}</span>
             </div>
             
             <h1 className={styles.heroTitle}>
-              {t('brand.name')}
+              {t('hero.title')}
             </h1>
             
             <p className={styles.heroDescription}>

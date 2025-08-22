@@ -3,10 +3,10 @@ import { Language } from '../store/slices/languageSlice'
 export const translations = {
   de: {
     // Brand
-    'brand.name': 'Medizinische Assistenz',
+    'brand.name': 'LÜ Medizinische Assistenz',
     
     // Navigation
-    'nav.about': 'Über mich',
+    'nav.about': 'Über uns',
     'nav.services': 'Leistungen',
     'nav.prices': 'Preise',
     'nav.contact': 'Kontakt',
@@ -27,7 +27,7 @@ export const translations = {
     // About Section
     'about.title': 'Wer ich bin',
     'about.subtitle': 'Ihre medizinische Assistenz',
-    'about.description': 'Mein Name ist Yelyzaveta. Ich bin medizinische Fachangestellter mit langjähriger Erfahrung und arbeite eng mit Ärzten zusammen, denen ich vertraue. Durch meine Kenntnisse im medizinischen Bereich kann ich Sie nicht nur bei Terminen unterstützen, sondern auch bei der Organisation, Dokumentation und Kommunikation mit Ärzten und Kliniken. Darüber hinaus helfe ich auch bei allgemeinen Anträgen und Dokumenten, die über den medizinischen Bereich hinausgehen. Meine Stärke ist, komplexe Abläufe einfach und klar zu erklären und Sie Schritt für Schritt zu begleiten.',
+    'about.description': 'Mein Name ist Yelyzaveta. Ich bin medizinische Fachangestellter mit langjähriger Erfahrung und arbeite eng mit Ärzten zusammen, denen ich vertraue. Durch meine Kenntnisse im medizinischen Bereich kann ich Sie nicht nur bei Terminen unterstützen, sondern auch bei der Organisation, Dokumentation und Kommunikation mit Ärzten und Kliniken.\nDarüber hinaus helfe ich auch bei allgemeinen Anträgen und Dokumenten, die über den medizinischen Bereich hinausgehen. Meine Stärke ist, komplexe Abläufe einfach und klar zu erklären und Sie Schritt für Schritt zu begleiten.',
     'about.feature1': 'Zuverlässigkeit und Diskretion',
     'about.feature1.description': 'Ihre persönlichen Daten und medizinischen Informationen sind bei uns sicher.',
     'about.feature2': 'Medizinisches Fachwissen',
@@ -52,21 +52,21 @@ export const translations = {
     'services.title': 'Unser Service',
     'services.subtitle': 'wir sind für Sie da',
     'services.service1.title': 'Terminvereinbarung',
-    'services.service1.description': 'Wir vereinbaren Termine bei Fachärzten, auch bei schwer erreichbaren Praxen, oft innerhalb weniger Tage.',
+    'services.service1.description': 'Wir organisieren kurzfristig medizinische Termine – auch dann, wenn es sonst schwierig ist, schnell einen Termin zu bekommen.',
     'services.service2.title': 'Übersetzungen',
-    'services.service2.description': 'Professionelle Übersetzungen Deutsch ⇄ Ukrainisch/Russisch für medizinische Dokumente und Gespräche.',
+    'services.service2.description': 'Medizinische Fachbegriffe, Arztbriefe oder Gespräche – wir sorgen für eine klare und richtige Übersetzung.',
     'services.service3.title': 'Dokumentenausfüllung',
-    'services.service3.description': 'Hilfe beim korrekten Ausfüllen von Anträgen, Formularen und medizinischen Dokumenten.',
+    'services.service3.description': 'Hilfe beim Ausfüllen medizinischer Unterlagen (z. B. Anträge auf Invalidität, Krankenkassenformulare).',
     'services.service4.title': 'Erstbesuch beim Arzt',
-    'services.service4.description': 'Begleitung zu Ihrem ersten Arztbesuch mit Übersetzung und Unterstützung bei der Kommunikation.',
+    'services.service4.description': 'Unterstützung beim ersten Termin: Formulare, Begleitung, Übersetzung.',
     'services.service5.title': 'Notfall-Begleitung',
-    'services.service5.description': 'Dringende Begleitung ins Krankenhaus oder zur Notaufnahme mit sofortiger Übersetzungshilfe.',
+    'services.service5.description': 'Wir kommen im Notfall mit und übersetzen die Gespräche mit Ärzten.',
     'services.service6.title': 'Hausarzt finden',
-    'services.service6.description': 'Wir helfen Ihnen dabei, einen passenden Hausarzt in Ihrer Nähe zu finden und den ersten Termin zu vereinbaren.',
+    'services.service6.description': 'Wir helfen, einen guten Familienarzt (Hausarzt) für Ihre individuellen Bedürfnisse zu finden.',
     'services.service7.title': 'Vorgespräche vor Operationen',
-    'services.service7.description': 'Begleitung zu wichtigen Aufklärungs- und Vorgesprächen vor geplanten medizinischen Eingriffen.',
+    'services.service7.description': 'Dolmetschen und Unterstützung bei wichtigen medizinischen Gesprächen vor Operationen.',
     'services.service8.title': 'Telefonische Kommunikation',
-    'services.service8.description': 'Telefonische Terminvereinbarung und Kommunikation mit Ärzten und Praxen in Ihrem Namen.',
+    'services.service8.description': 'Wir übernehmen Anrufe bei Ärzten, Kliniken oder Behörden – professionell und zuverlässig.',
     'services.learnMore': 'Mehr erfahren',
 
     // Prices Section
@@ -140,10 +140,10 @@ export const translations = {
   },
   ru: {
     // Brand
-    'brand.name': 'Медицинская Консультация',
+    'brand.name': 'LÜ Medizinische Assistenz',
     
     // Navigation
-    'nav.about': 'Обо мне',
+    'nav.about': 'О нас',
     'nav.services': 'Услуги',
     'nav.prices': 'Цены',
     'nav.contact': 'Контакты',
@@ -164,7 +164,7 @@ export const translations = {
     // About Section
     'about.title': 'Кто я',
     'about.subtitle': 'Ваш медицинский ассистент',
-    'about.description': 'Меня зовут Елизавета. Я медицинский специалист с многолетним опытом и тесно работаю с врачами, которым доверяю. Благодаря моим знаниям в медицинской области, я могу поддержать вас не только в записи на прием, но и в организации, документообороте и общении с врачами и клиниками. Кроме того, я также помогаю с общими заявлениями и документами, выходящими за рамки медицинской сферы. Моя сильная сторона - объяснять сложные процессы просто и понятно, сопровождая вас шаг за шагом.',
+    'about.description': 'Меня зовут Елизавета. Я медицинский специалист с многолетним опытом и тесно работаю с врачами, которым доверяю. Благодаря моим знаниям в медицинской области, я могу поддержать вас не только в записи на прием, но и в организации, документообороте и общении с врачами и клиниками.\nКроме того, я также помогаю с общими заявлениями и документами, выходящими за рамки медицинской сферы. Моя сильная сторона - объяснять сложные процессы просто и понятно, сопровождая вас шаг за шагом.',
     'about.feature1': 'Надежность и конфиденциальность',
     'about.feature1.description': 'Ваши личные данные и медицинская информация в безопасности у нас.',
     'about.feature2': 'Медицинские знания',
@@ -189,21 +189,21 @@ export const translations = {
     'services.title': 'Наши услуги',
     'services.subtitle': 'мы здесь для вас',
     'services.service1.title': 'Запись к врачу',
-    'services.service1.description': 'Мы записываем к специалистам, даже к труднодоступным врачам, часто в течение нескольких дней.',
+    'services.service1.description': 'Мы организуем срочные медицинские записи – даже тогда, когда сложно быстро получить запись.',
     'services.service2.title': 'Переводы',
-    'services.service2.description': 'Профессиональные переводы немецкий ⇄ украинский/русский для медицинских документов и бесед.',
+    'services.service2.description': 'Медицинские термины, врачебные письма или беседы – мы обеспечиваем ясный и правильный перевод.',
     'services.service3.title': 'Заполнение документов',
-    'services.service3.description': 'Помощь в правильном заполнении заявлений, форм и медицинских документов.',
+    'services.service3.description': 'Помощь в заполнении медицинских документов (например, заявления на инвалидность, формы медстрахования).',
     'services.service4.title': 'Первый визит к врачу',
-    'services.service4.description': 'Сопровождение на первый прием к врачу с переводом и поддержкой в общении.',
+    'services.service4.description': 'Поддержка при первом приеме: формы, сопровождение, перевод.',
     'services.service5.title': 'Экстренное сопровождение',
-    'services.service5.description': 'Срочное сопровождение в больницу или приемный покой с немедленной помощью перевода.',
+    'services.service5.description': 'Мы приходим в экстренных случаях и переводим разговоры с врачами.',
     'services.service6.title': 'Поиск семейного врача',
-    'services.service6.description': 'Мы поможем найти подходящего семейного врача рядом с вами и записаться на первый прием.',
+    'services.service6.description': 'Мы помогаем найти хорошего семейного врача (домашнего врача) для ваших индивидуальных потребностей.',
     'services.service7.title': 'Предварительные беседы перед операциями',
-    'services.service7.description': 'Сопровождение на важные консультации и предварительные беседы перед плановыми медицинскими вмешательствами.',
+    'services.service7.description': 'Перевод и поддержка при важных медицинских беседах перед операциями.',
     'services.service8.title': 'Телефонное общение',
-    'services.service8.description': 'Телефонная запись и общение с врачами и клиниками от вашего имени.',
+    'services.service8.description': 'Мы берем на себя звонки врачам, клиникам или ведомствам – профессионально и надежно.',
     'services.learnMore': 'Подробнее',
 
     // Prices Section
@@ -277,10 +277,10 @@ export const translations = {
   },
   en: {
     // Brand
-    'brand.name': 'Medical Assistance',
+    'brand.name': 'LÜ Medizinische Assistenz',
     
     // Navigation
-    'nav.about': 'About me',
+    'nav.about': 'About us',
     'nav.services': 'Services',
     'nav.prices': 'Prices',
     'nav.contact': 'Contact',
@@ -301,7 +301,7 @@ export const translations = {
     // About Section
     'about.title': 'Who I am',
     'about.subtitle': 'Your medical assistant',
-    'about.description': 'My name is Yelyzaveta. I am a medical professional with many years of experience and work closely with doctors I trust. Through my knowledge in the medical field, I can support you not only with appointments, but also with organization, documentation and communication with doctors and clinics. In addition, I also help with general applications and documents that go beyond the medical field. My strength is to explain complex processes simply and clearly and to accompany you step by step.',
+    'about.description': 'My name is Yelyzaveta. I am a medical professional with many years of experience and work closely with doctors I trust. Through my knowledge in the medical field, I can support you not only with appointments, but also with organization, documentation and communication with doctors and clinics.\nIn addition, I also help with general applications and documents that go beyond the medical field. My strength is to explain complex processes simply and clearly and to accompany you step by step.',
     'about.feature1': 'Reliability and discretion',
     'about.feature1.description': 'Your personal data and medical information are safe with us.',
     'about.feature2': 'Medical expertise',
@@ -326,21 +326,21 @@ export const translations = {
     'services.title': 'Our service',
     'services.subtitle': 'we are here for you',
     'services.service1.title': 'Appointment scheduling',
-    'services.service1.description': 'We arrange appointments with specialists, even at hard-to-reach practices, often within a few days.',
+    'services.service1.description': 'We organize short-term medical appointments – even when it is otherwise difficult to get an appointment quickly.',
     'services.service2.title': 'Translations',
-    'services.service2.description': 'Professional translations German ⇄ Ukrainian/Russian for medical documents and conversations.',
+    'services.service2.description': 'Medical terminology, doctor letters or conversations – we ensure clear and correct translation.',
     'services.service3.title': 'Document completion',
-    'services.service3.description': 'Help with correctly filling out applications, forms and medical documents.',
+    'services.service3.description': 'Help with filling out medical documents (e.g. disability applications, health insurance forms).',
     'services.service4.title': 'First doctor visit',
-    'services.service4.description': 'Accompaniment to your first doctor visit with translation and communication support.',
+    'services.service4.description': 'Support for the first appointment: forms, accompaniment, translation.',
     'services.service5.title': 'Emergency accompaniment',
-    'services.service5.description': 'Urgent accompaniment to hospital or emergency room with immediate translation assistance.',
+    'services.service5.description': 'We come in emergencies and translate conversations with doctors.',
     'services.service6.title': 'Find family doctor',
-    'services.service6.description': 'We help you find a suitable family doctor near you and arrange the first appointment.',
+    'services.service6.description': 'We help find a good family doctor (general practitioner) for your individual needs.',
     'services.service7.title': 'Pre-operative consultations',
-    'services.service7.description': 'Accompaniment to important consultation and preliminary talks before planned medical procedures.',
+    'services.service7.description': 'Interpreting and support for important medical conversations before operations.',
     'services.service8.title': 'Telephone communication',
-    'services.service8.description': 'Telephone appointment scheduling and communication with doctors and practices on your behalf.',
+    'services.service8.description': 'We take on calls to doctors, clinics or authorities – professionally and reliably.',
     'services.learnMore': 'Learn more',
 
     // Prices Section
