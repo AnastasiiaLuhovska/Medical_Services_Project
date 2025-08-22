@@ -35,13 +35,13 @@ const Appointment = () => {
       .email(t('validation.emailInvalid'))
       .required(t('validation.emailRequired')),
     phone: Yup.string()
-      .matches(/^[\+]?[0-9\s\-\(\)]+$/, t('validation.phoneInvalid'))
+      .matches(/^\+[0-9\s\-\(\)]{8,20}$/, t('validation.phoneInvalid'))
+      .min(10, t('validation.phoneMin'))
+      .max(25, t('validation.phoneMax'))
       .required(t('validation.phoneRequired')),
     date: Yup.date()
-      .min(new Date(), t('validation.datePast'))
-      .required(t('validation.dateRequired')),
-    time: Yup.string()
-      .required(t('validation.timeRequired')),
+      .min(new Date(), t('validation.datePast')),
+    time: Yup.string(),
     message: Yup.string()
       .max(500, t('validation.messageMax'))
   })
@@ -103,8 +103,10 @@ Bitte senden Sie diese Daten per Email an: medizinischeassistenzlue@gmail.com
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
           >
-            {({ isSubmitting }) => (
-              <Form className={styles.appointmentForm}>
+            {({ isSubmitting, values, touched, isValid }) => {
+              const isFormReady = values.name && values.email && values.phone && isValid
+              return (
+                <Form className={styles.appointmentForm}>
                 <div className={styles.formGrid}>
                   <div className={styles.formGroup}>
                     <label htmlFor="name" className={styles.formLabel}>
@@ -196,14 +198,15 @@ Bitte senden Sie diese Daten per Email an: medizinischeassistenzlue@gmail.com
                 <div className={styles.submitContainer}>
                   <button
                     type="submit"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !isFormReady}
                     className={`btn btn-primary ${styles.submitBtn}`}
                   >
                     {isSubmitting ? t('appointment.submitting') : t('appointment.submit')}
                   </button>
                 </div>
-              </Form>
-            )}
+                </Form>
+              )
+            }}
           </Formik>
         </div>
       </div>

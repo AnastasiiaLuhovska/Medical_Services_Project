@@ -233,6 +233,14 @@
   color: var(--white) !important;
 }
 
+.appointment .section-title .section-heading {
+  color: var(--white) !important;
+}
+
+section.appointment .section-heading {
+  color: var(--white) !important;
+}
+
 input[type="date"] {
   color-scheme: dark;
 }
