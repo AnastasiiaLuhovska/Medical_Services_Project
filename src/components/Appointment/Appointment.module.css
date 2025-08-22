@@ -225,6 +225,14 @@
   color: var(--white) !important;
 }
 
+.appointment .section-subtitle {
+  color: var(--white) !important;
+}
+
+.appointment .section-title {
+  color: var(--white) !important;
+}
+
 input[type="date"] {
   color-scheme: dark;
 }

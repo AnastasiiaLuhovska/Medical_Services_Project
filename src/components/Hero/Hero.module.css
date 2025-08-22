@@ -209,20 +209,27 @@
 
   .heroContent {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 4rem;
     text-align: center;
+  }
+  
+  .heroSubtitle {
+    margin-bottom: 2rem;
   }
 
   .heroTitle {
     font-size: 2.5rem;
+    margin-bottom: 2rem;
   }
 
   .heroDescription {
     font-size: 1rem;
+    margin-bottom: 3rem;
   }
 
   .heroButtons {
     justify-content: center;
+    margin-bottom: 2rem;
   }
 
   .floatingCard {
@@ -234,7 +241,7 @@
     max-width: 320px;
     min-width: 280px;
     height: 380px;
-    margin: 0 auto;
+    margin: 0 auto 3rem auto;
   }
   
   .doctorPlaceholder {
