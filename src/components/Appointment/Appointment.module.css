@@ -278,59 +278,59 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
-/* Специальные стили для iOS/iPhone */
+/* Специальные стили для iOS/iPhone - черный текст */
 @supports (-webkit-overflow-scrolling: touch) {
-  .formInput,
-  .formSelect,
-  .formTextarea {
-    color: var(--white) !important;
-    background: rgba(255, 255, 255, 0.15) !important;
-    border: 2px solid rgba(255, 255, 255, 0.4) !important;
-    -webkit-appearance: none !important;
-    -webkit-text-fill-color: var(--white) !important;
-  }
-  
-  .formInput::placeholder,
-  .formTextarea::placeholder {
-    color: rgba(255, 255, 255, 0.8) !important;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0.8) !important;
-    opacity: 1 !important;
+  @media (max-width: 767px) {
+    .formInput,
+    .formSelect,
+    .formTextarea {
+      color: var(--text-dark) !important;
+      background: rgba(255, 255, 255, 0.9) !important;
+      border: 2px solid rgba(255, 255, 255, 0.8) !important;
+      -webkit-text-fill-color: var(--text-dark) !important;
+    }
+    
+    .formInput::placeholder,
+    .formTextarea::placeholder {
+      color: rgba(102, 102, 102, 0.8) !important;
+      -webkit-text-fill-color: rgba(102, 102, 102, 0.8) !important;
+      opacity: 1 !important;
+    }
   }
 }
 
-/* Дополнительные стили для всех мобильных устройств */
+/* Стили для всех мобильных устройств - черный текст */
 @media (max-width: 767px) {
   .formInput,
   .formSelect,
   .formTextarea {
-    color: var(--white) !important;
-    background: rgba(255, 255, 255, 0.15) !important;
-    border: 2px solid rgba(255, 255, 255, 0.4) !important;
-    -webkit-appearance: none !important;
-    -webkit-text-fill-color: var(--white) !important;
+    color: var(--text-dark) !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 2px solid rgba(255, 255, 255, 0.8) !important;
+    -webkit-text-fill-color: var(--text-dark) !important;
   }
   
   .formInput::placeholder,
   .formTextarea::placeholder {
-    color: rgba(255, 255, 255, 0.8) !important;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0.8) !important;
+    color: rgba(102, 102, 102, 0.8) !important;
+    -webkit-text-fill-color: rgba(102, 102, 102, 0.8) !important;
     opacity: 1 !important;
   }
   
   .formSelect {
-    background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='%23ffffff' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>") !important;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='%23333333' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>") !important;
     background-repeat: no-repeat !important;
     background-position: right 0.7rem center !important;
     background-size: 0.65rem auto !important;
   }
   
-  /* Отключаем автозаполнение браузера */
+  /* Автозаполнение браузера для мобильных */
   .formInput:-webkit-autofill,
   .formInput:-webkit-autofill:hover,
   .formInput:-webkit-autofill:focus,
   .formInput:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.15) inset !important;
-    -webkit-text-fill-color: var(--white) !important;
-    border: 2px solid rgba(255, 255, 255, 0.4) !important;
+    -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.9) inset !important;
+    -webkit-text-fill-color: var(--text-dark) !important;
+    border: 2px solid rgba(255, 255, 255, 0.8) !important;
   }
 }
