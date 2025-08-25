@@ -10,7 +10,6 @@ import Appointment from '../src/components/Appointment/Appointment'
 import Contact from '../src/components/Contact/Contact'
 import Footer from '../src/components/Footer/Footer'
 import { ToastProvider } from '../src/contexts/ToastContext'
-import Toast from '../src/components/Toast/Toast'
 
 interface HomeProps {
   locale: string
@@ -74,7 +73,6 @@ export default function Home({ locale }: HomeProps) {
       <Appointment locale={locale} />
       <Contact locale={locale} />
       <Footer locale={locale} />
-      <Toast />
     </ToastProvider>
   )
 }
