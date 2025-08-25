@@ -3,8 +3,8 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import styles from './Appointment.module.css'
 import { useTranslation } from '../../../lib/i18n'
-import { useToast } from '../../contexts/ToastContext'
 import { submitToGoogleSheets } from '../../utils/googleSheets'
+import toast from 'react-hot-toast'
 
 interface SimplifiedAppointmentFormData {
   name: string
@@ -18,7 +18,6 @@ interface SimplifiedAppointmentFormData {
 const Appointment = () => {
   const router = useRouter()
   const { t } = useTranslation(router.locale)
-  const { showToast } = useToast()
   const initialValues: SimplifiedAppointmentFormData = {
     name: '',
     email: '',
@@ -65,7 +64,7 @@ const Appointment = () => {
       const success = await submitToGoogleSheets(values)
       
       if (success) {
-        showToast(t('toast.success'), 'success')
+        toast.success(t('toast.success'))
         resetForm()
       } else {
         const formattedData = `
@@ -81,12 +80,12 @@ Bitte senden Sie diese Daten per Email an: medizinischeassistenzlue@gmail.com
         
         if (confirm(t('toast.copyConfirm'))) {
           navigator.clipboard.writeText(formattedData)
-          showToast(t('toast.copySuccess'), 'info')
+          toast(t('toast.copySuccess'))
         }
       }
     } catch (error) {
       console.error('Error submitting form:', error)
-      showToast(t('toast.error'), 'error')
+      toast.error(t('toast.error'))
     } finally {
       setSubmitting(false)
     }

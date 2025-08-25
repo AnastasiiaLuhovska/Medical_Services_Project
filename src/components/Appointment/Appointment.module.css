@@ -62,18 +62,18 @@
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 0.5rem;
   font-size: 0.9rem;
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--white) !important;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333 !important;
   transition: all 0.3s ease;
   backdrop-filter: blur(5px);
   -webkit-appearance: none;
-  -webkit-text-fill-color: var(--white) !important;
+  -webkit-text-fill-color: #333 !important;
 }
 
 .formInput::placeholder,
 .formTextarea::placeholder {
-  color: rgba(255, 255, 255, 0.7) !important;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0.7) !important;
+  color: #666 !important;
+  -webkit-text-fill-color: #666 !important;
   opacity: 1;
 }
 
@@ -82,16 +82,16 @@
 .formInput:-webkit-autofill:hover,
 .formInput:-webkit-autofill:focus,
 .formInput:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.1) inset !important;
-  -webkit-text-fill-color: var(--white) !important;
-  color: var(--white) !important;
+  -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.9) inset !important;
+  -webkit-text-fill-color: #333 !important;
+  color: #333 !important;
 }
 
 .formSelect:-webkit-autofill,
 .formTextarea:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.1) inset !important;
-  -webkit-text-fill-color: var(--white) !important;
-  color: var(--white) !important;
+  -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.9) inset !important;
+  -webkit-text-fill-color: #333 !important;
+  color: #333 !important;
 }
 
 .formInput:focus,
@@ -99,7 +99,7 @@
 .formTextarea:focus {
   outline: none;
   border-color: var(--accent-blue);
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.3);
 }
 
@@ -156,21 +156,21 @@
   transform: none;
 }
 
-/* Планшеты и десктопы - те же стили цвета что и на мобилке */
+/* Планшеты и десктопы - черный текст как на мобилке */
 @media (min-width: 768px) {
   .formInput,
   .formSelect,
   .formTextarea {
-    color: var(--white) !important;
-    background: rgba(255, 255, 255, 0.1) !important;
+    color: #333 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
     border: 2px solid rgba(255, 255, 255, 0.3) !important;
-    -webkit-text-fill-color: var(--white) !important;
+    -webkit-text-fill-color: #333 !important;
   }
 
   .formInput::placeholder,
   .formTextarea::placeholder {
-    color: rgba(255, 255, 255, 0.7) !important;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0.7) !important;
+    color: #666 !important;
+    -webkit-text-fill-color: #666 !important;
   }
 
   .formLabel {
@@ -204,14 +204,16 @@
   .formTextarea {
     padding: 0.75rem;
     font-size: 0.875rem;
-    color: var(--white) !important;
-    background: rgba(255, 255, 255, 0.15) !important;
+    color: #333 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
     border: 2px solid rgba(255, 255, 255, 0.4) !important;
+    -webkit-text-fill-color: #333 !important;
   }
 
   .formInput::placeholder,
   .formTextarea::placeholder {
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: #666 !important;
+    -webkit-text-fill-color: #666 !important;
   }
 
   .formLabel {

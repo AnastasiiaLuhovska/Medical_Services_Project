@@ -9,7 +9,7 @@ import Prices from '../src/components/Prices/Prices'
 import Appointment from '../src/components/Appointment/Appointment'
 import Contact from '../src/components/Contact/Contact'
 import Footer from '../src/components/Footer/Footer'
-import { ToastProvider } from '../src/contexts/ToastContext'
+import { Toaster } from 'react-hot-toast'
 
 interface HomeProps {
   locale: string
@@ -43,7 +43,7 @@ export default function Home({ locale }: HomeProps) {
   const meta = getMetaTags()
 
   return (
-    <ToastProvider>
+    <>
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
@@ -65,6 +65,17 @@ export default function Home({ locale }: HomeProps) {
         <link rel="alternate" hrefLang="x-default" href="https://yourdomain.com/" />
       </Head>
 
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          duration: 4000,
+          style: {
+            background: '#363636',
+            color: '#fff',
+          },
+        }}
+      />
+      
       <Header locale={locale} />
       <Hero locale={locale} />
       <About locale={locale} />
@@ -73,7 +84,7 @@ export default function Home({ locale }: HomeProps) {
       <Appointment locale={locale} />
       <Contact locale={locale} />
       <Footer locale={locale} />
-    </ToastProvider>
+    </>
   )
 }
 
