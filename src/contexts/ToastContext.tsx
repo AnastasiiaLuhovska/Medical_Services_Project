@@ -1,14 +1,14 @@
 import { ReactNode } from 'react'
+import toast, { Toaster } from 'react-hot-toast'
 
 export const useToast = () => {
   const showToast = (message: string, type: 'success' | 'error' | 'info' = 'info') => {
-    // Простое браузерное уведомление
     if (type === 'success') {
-      alert(`✅ ${message}`)
+      toast.success(message)
     } else if (type === 'error') {
-      alert(`❌ ${message}`)
+      toast.error(message)
     } else {
-      alert(`ℹ️ ${message}`)
+      toast(message)
     }
   }
 
@@ -20,5 +20,25 @@ interface ToastProviderProps {
 }
 
 export const ToastProvider = ({ children }: ToastProviderProps) => {
-  return <>{children}</>
+  return (
+    <>
+      {children}
+      <Toaster 
+        position="top-right"
+        toastOptions={{
+          duration: 4000,
+          style: {
+            background: '#363636',
+            color: '#fff',
+          },
+          success: {
+            duration: 3000,
+          },
+          error: {
+            duration: 5000,
+          },
+        }}
+      />
+    </>
+  )
 }
