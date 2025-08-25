@@ -1,8 +1,10 @@
+import { useRouter } from 'next/router'
 import styles from './Prices.module.css'
-import { useTranslation } from '../../hooks/useTranslation'
+import { useTranslation } from '../../../lib/i18n'
 
 const Prices = () => {
-  const { t } = useTranslation()
+  const router = useRouter()
+  const { t } = useTranslation(router.locale)
 
   const prices = [
     {

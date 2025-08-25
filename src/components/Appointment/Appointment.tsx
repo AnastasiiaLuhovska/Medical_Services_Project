@@ -1,7 +1,8 @@
+import { useRouter } from 'next/router'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import styles from './Appointment.module.css'
-import { useTranslation } from '../../hooks/useTranslation'
+import { useTranslation } from '../../../lib/i18n'
 import { useToast } from '../../contexts/ToastContext'
 import { submitToGoogleSheets } from '../../utils/googleSheets'
 
@@ -15,7 +16,8 @@ interface SimplifiedAppointmentFormData {
 }
 
 const Appointment = () => {
-  const { t } = useTranslation()
+  const router = useRouter()
+  const { t } = useTranslation(router.locale)
   const { showToast } = useToast()
   const initialValues: SimplifiedAppointmentFormData = {
     name: '',

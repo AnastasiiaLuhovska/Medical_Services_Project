@@ -1,10 +1,12 @@
 
+import { useRouter } from 'next/router'
 import styles from './Hero.module.css'
 import { smoothScrollTo } from '../../utils/scrollAnimation'
-import { useTranslation } from '../../hooks/useTranslation'
+import { useTranslation } from '../../../lib/i18n'
 
 const Hero = () => {
-  const { t } = useTranslation()
+  const router = useRouter()
+  const { t } = useTranslation(router.locale)
 
   return (
     <section id="home" className={styles.hero}>

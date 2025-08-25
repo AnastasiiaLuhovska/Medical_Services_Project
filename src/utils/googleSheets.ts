@@ -1,4 +1,4 @@
-const url = import.meta.env.VITE_SCRIPT_URL
+const url = process.env.NEXT_PUBLIC_SCRIPT_URL
 
 
 export interface FormSubmission {
@@ -13,7 +13,7 @@ export interface FormSubmission {
 
 export const submitToGoogleSheets = async (formData: FormSubmission): Promise<boolean> => {
   try {
-    console.log('Environment variable VITE_SCRIPT_URL:', import.meta.env.VITE_SCRIPT_URL);
+    console.log('Environment variable NEXT_PUBLIC_SCRIPT_URL:', process.env.NEXT_PUBLIC_SCRIPT_URL);
     console.log('Final Script URL:', url);
     
     if (!url || url.includes('your_google_script_url_here')) {

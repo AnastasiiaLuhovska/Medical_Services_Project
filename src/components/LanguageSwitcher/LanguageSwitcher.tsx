@@ -1,15 +1,20 @@
-import { useTranslation } from '../../hooks/useTranslation'
-import { Language } from '../../store/slices/languageSlice'
+import { useRouter } from 'next/router'
+import { Language } from '../../../lib/translations'
 import styles from './LanguageSwitcher.module.css'
 
 const LanguageSwitcher = () => {
-  const { language, changeLanguage } = useTranslation()
+  const router = useRouter()
+  const currentLocale = router.locale as Language
 
   const languages: { code: Language; label: string }[] = [
     { code: 'de', label: 'DE' },
     { code: 'ru', label: 'RU' },
     { code: 'en', label: 'EN' }
   ]
+
+  const changeLanguage = (locale: Language) => {
+    router.push(router.asPath, router.asPath, { locale })
+  }
 
   return (
     <div className={styles.languageSwitcher}>
@@ -18,7 +23,7 @@ const LanguageSwitcher = () => {
           <button
             onClick={() => changeLanguage(lang.code)}
             className={`${styles.languageButton} ${
-              language === lang.code ? styles.active : ''
+              currentLocale === lang.code ? styles.active : ''
             }`}
           >
             {lang.label}

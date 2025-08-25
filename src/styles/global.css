@@ -4,6 +4,53 @@
   box-sizing: border-box;
 }
 
+/* Global styles for appointment section */
+section.appointment .section-heading {
+  color: var(--white) !important;
+}
+
+section#appointment .section-heading {
+  color: var(--white) !important;
+}
+
+section#appointment h2 {
+  color: var(--white) !important;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 :root {
   --primary-blue: #2E4894;
   --light-blue: #87CEEB;

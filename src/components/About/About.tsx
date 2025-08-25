@@ -1,8 +1,12 @@
 import styles from './About.module.css'
-import { useTranslation } from '../../hooks/useTranslation'
+import { useTranslation } from '../../../lib/i18n'
 
-const About = () => {
-  const { t } = useTranslation()
+interface AboutProps {
+  locale: string
+}
+
+const About = ({ locale }: AboutProps) => {
+  const { t } = useTranslation(locale)
   const features = [
     {
       icon: '🔒',
@@ -35,22 +39,19 @@ const About = () => {
       <div className="container">
         <div className={styles.aboutContent}>
           <div className={styles.aboutMain}>
-            <div className={styles.aboutText} data-animate="fade-right">
+            <div className={styles.aboutText}>
               <div className="section-title">
                 <div className="section-subtitle">{t('about.subtitle')}</div>
                 <h2 className="section-heading">{t('about.title')}</h2>
               </div>
               
-              <p className={styles.aboutDescription}>
-                {t('about.description')}
-              </p>
-              
-              <button 
-                className="btn btn-primary"
-                onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                {t('about.learnMore')}
-              </button>
+              <div className={styles.aboutDescription}>
+                {t('about.description').split('\n\n').map((paragraph, index) => (
+                  <p key={index} className={index > 0 ? styles.aboutDescriptionParagraph : undefined}>
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </div>
             
             <div className={styles.aboutImage} data-animate="fade-left">
@@ -88,6 +89,19 @@ const About = () => {
                 </div>
               </div>
             ))}
+          </div>
+          
+          <div className={styles.contactButtonContainer}>
+            <button 
+              className="btn btn-primary"
+              onClick={() => {
+                if (typeof window !== 'undefined') {
+                  document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
+                }
+              }}
+            >
+              {t('about.learnMore')}
+            </button>
           </div>
         </div>
       </div>

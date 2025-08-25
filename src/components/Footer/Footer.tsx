@@ -1,8 +1,10 @@
+import { useRouter } from 'next/router'
 import styles from './Footer.module.css'
-import { useTranslation } from '../../hooks/useTranslation'
+import { useTranslation } from '../../../lib/i18n'
 
 const Footer = () => {
-  const { t } = useTranslation()
+  const router = useRouter()
+  const { t } = useTranslation(router.locale)
   return (
     <footer className={styles.footer}>
       <div className="container">
