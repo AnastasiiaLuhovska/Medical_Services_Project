@@ -37,7 +37,7 @@ const Appointment = () => {
       .email(t('validation.emailInvalid'))
       .required(t('validation.emailRequired')),
     phone: Yup.string()
-      .matches(/^\+[0-9\s\-\(\)]{8,20}$/, t('validation.phoneInvalid'))
+      .matches(/^[+][0-9\s\-()]{8,20}$/, t('validation.phoneInvalid'))
       .min(10, t('validation.phoneMin'))
       .max(25, t('validation.phoneMax'))
       .required(t('validation.phoneRequired')),

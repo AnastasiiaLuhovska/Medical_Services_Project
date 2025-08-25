@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import styles from './Header.module.css'
 import { smoothScrollTo } from '../../utils/scrollAnimation'
-import { useRouter } from 'next/router'
 import { useTranslation } from '../../../lib/i18n'
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher'
 
@@ -12,7 +11,6 @@ interface HeaderProps {
 const Header = ({ locale }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const router = useRouter()
   const { t } = useTranslation(locale)
 
   useEffect(() => {
