@@ -18,7 +18,7 @@ interface HomeProps {
 export default function Home({ locale }: HomeProps) {
   const { t } = useTranslation(locale)
 
-  // SEO meta tags based on locale
+
   const getMetaTags = () => {
     const seoConfig = {
       de: {

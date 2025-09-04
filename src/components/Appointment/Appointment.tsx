@@ -3,22 +3,17 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import styles from './Appointment.module.css'
 import { useTranslation } from '../../../lib/i18n'
-import { submitToGoogleSheets } from '../../utils/googleSheets'
-import toast from 'react-hot-toast'
-
-interface SimplifiedAppointmentFormData {
-  name: string
-  email: string
-  phone: string
-  date: string
-  time: string
-  message: string
-}
+import { useAppDispatch, useAppSelector } from '../../store/index'
+import { postContact, AppointmentData } from '../../store/operations'
+import { selectContactIsLoading } from '../../store/selectors'
 
 const Appointment = () => {
   const router = useRouter()
   const { t } = useTranslation(router.locale)
-  const initialValues: SimplifiedAppointmentFormData = {
+  const dispatch = useAppDispatch()
+  const isLoading = useAppSelector(selectContactIsLoading)
+  
+  const initialValues: AppointmentData = {
     name: '',
     email: '',
     phone: '',
@@ -41,8 +36,10 @@ const Appointment = () => {
       .max(25, t('validation.phoneMax'))
       .required(t('validation.phoneRequired')),
     date: Yup.date()
-      .min(new Date(), t('validation.datePast')),
-    time: Yup.string(),
+      .min(new Date(), t('validation.datePast'))
+      .required(t('validation.dateRequired')),
+    time: Yup.string()
+      .required(t('validation.timeRequired')),
     message: Yup.string()
       .max(500, t('validation.messageMax'))
   })
@@ -56,15 +53,10 @@ const Appointment = () => {
     '18:00', '18:30', '19:00'
   ]
 
-  const handleSubmit = async (values: SimplifiedAppointmentFormData, { setSubmitting, resetForm }: any) => {
+  const handleSubmit = async (values: AppointmentData, { setSubmitting, resetForm }: any) => {
     try {
-      console.log('Form submitted:', values)
-      
-      // Отправка в Google Sheets
-      const success = await submitToGoogleSheets(values)
-      
-      if (success) {
-        toast.success(t('toast.success'))
+      const result = await dispatch(postContact(values))
+      if (postContact.fulfilled.match(result)) {
         resetForm()
       } else {
         const formattedData = `
@@ -80,12 +72,10 @@ Bitte senden Sie diese Daten per Email an: medizinischeassistenzlue@gmail.com
         
         if (confirm(t('toast.copyConfirm'))) {
           navigator.clipboard.writeText(formattedData)
-          toast(t('toast.copySuccess'))
         }
       }
     } catch (error) {
       console.error('Error submitting form:', error)
-      toast.error(t('toast.error'))
     } finally {
       setSubmitting(false)
     }
@@ -104,7 +94,7 @@ Bitte senden Sie diese Daten per Email an: medizinischeassistenzlue@gmail.com
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
           >
-            {({ isSubmitting, values, isValid }) => {
+            {({ values, isValid }) => {
               const isFormReady = values.name && values.email && values.phone && isValid
               return (
                 <Form className={styles.appointmentForm}>
@@ -199,10 +189,10 @@ Bitte senden Sie diese Daten per Email an: medizinischeassistenzlue@gmail.com
                 <div className={styles.submitContainer}>
                   <button
                     type="submit"
-                    disabled={isSubmitting || !isFormReady}
+                    disabled={isLoading || !isFormReady}
                     className={`btn btn-primary ${styles.submitBtn}`}
                   >
-                    {isSubmitting ? t('appointment.submitting') : t('appointment.submit')}
+                    {isLoading ? t('appointment.submitting') : t('appointment.submit')}
                   </button>
                 </div>
                 </Form>
