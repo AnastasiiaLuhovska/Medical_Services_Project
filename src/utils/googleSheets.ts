@@ -32,15 +32,13 @@ export const submitToGoogleSheets = async (formData: FormSubmission): Promise<bo
       })
     };
 
-    const formDataObj = new FormData();
-    Object.entries(dataWithTimestamp).forEach(([key, value]) => {
-      formDataObj.append(key, value.toString());
-    });
-
     await fetch(url, {
       method: 'POST',
       mode: 'no-cors',
-      body: formDataObj
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dataWithTimestamp)
     });
 
     console.log('Ответ Google Sheets получен');
