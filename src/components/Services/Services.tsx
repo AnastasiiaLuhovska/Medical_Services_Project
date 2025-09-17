@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import styles from './Services.module.css'
+import Image from 'next/image'
 import { useTranslation } from '../../../lib/i18n'
 
 const Services = () => {
@@ -82,10 +83,12 @@ const Services = () => {
             >
               <div className={styles.serviceImage}>
                 <div className={styles.servicePlaceholder}>
-                  <img 
-                    src={service.image} 
+                  <Image
+                    src={service.image}
                     alt={service.title}
                     className={styles.serviceSvg}
+                    width={300}
+                    height={250}
                   />
                 </div>
               </div>

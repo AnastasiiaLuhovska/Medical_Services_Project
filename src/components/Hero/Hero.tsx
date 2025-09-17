@@ -1,6 +1,7 @@
 
 import { useRouter } from 'next/router'
 import styles from './Hero.module.css'
+import Image from 'next/image'
 import { smoothScrollTo } from '../../utils/scrollAnimation'
 import { useTranslation } from '../../../lib/i18n'
 
@@ -45,10 +46,12 @@ const Hero = () => {
           <div className={styles.heroImage}>
             <div className={styles.imageContainer}>
               <div className={styles.doctorPlaceholder}>
-                <img 
+                <Image
                   src="/images/1.png"
-                  alt="Medical Services" 
+                  alt="Medical Services"
                   className={styles.doctorSvg}
+                  width={500}
+                  height={400}
                 />
               </div>
               

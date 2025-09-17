@@ -23,6 +23,7 @@ export const isElementInViewport = (element: Element, threshold: number = 0.1) =
 
 export const observeElements = (
   selector: string,
+  // eslint-disable-next-line no-unused-vars
   callback: (element: Element) => void,
   options: IntersectionObserverInit = {}
 ) => {

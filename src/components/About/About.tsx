@@ -1,4 +1,5 @@
 import styles from './About.module.css'
+import Image from 'next/image'
 import { useTranslation } from '../../../lib/i18n'
 
 interface AboutProps {
@@ -57,10 +58,12 @@ const About = ({ locale }: AboutProps) => {
             <div className={styles.aboutImage} data-animate="fade-left">
               <div className={styles.imageContainer}>
                 <div className={styles.doctorsPlaceholder}>
-                  <img 
+                  <Image
                     src="/images/2.jpg"
                     alt="Medical Professional"
                     className={styles.doctorsSvg}
+                    width={400}
+                    height={400}
                   />
                 </div>
                 

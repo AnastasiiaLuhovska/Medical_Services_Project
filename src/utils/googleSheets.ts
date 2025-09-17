@@ -37,7 +37,7 @@ export const submitToGoogleSheets = async (formData: FormSubmission): Promise<bo
       formDataObj.append(key, value.toString());
     });
 
-    const response = await fetch(url, {
+    await fetch(url, {
       method: 'POST',
       mode: 'no-cors',
       body: formDataObj

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import styles from './Header.module.css'
+import Image from 'next/image'
 import { smoothScrollTo } from '../../utils/scrollAnimation'
 import { useTranslation } from '../../../lib/i18n'
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher'
@@ -45,10 +46,12 @@ const Header = ({ locale }: HeaderProps) => {
         <div className={styles.headerContent}>
           <div className={styles.logo} onClick={handleLogoClick}>
             <div className={styles.logoIcon}>
-              <img 
+              <Image
                 src="/icons/icon.svg"
-                alt="Medical Assistance Icon" 
+                alt="Medical Assistance Icon"
                 className={styles.iconImage}
+                width={40}
+                height={40}
               />
             </div>
             <span className={styles.logoText}>{t('brand.name')}</span>
