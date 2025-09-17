@@ -18,6 +18,8 @@ export const submitToGoogleSheets = async (formData: FormSubmission): Promise<bo
       return false;
     }
 
+    console.log('Отправка данных в Google Sheets:', { url, formData });
+
     const dataWithTimestamp = {
       ...formData,
       timestamp: new Date().toLocaleString('de-DE', {
@@ -35,12 +37,13 @@ export const submitToGoogleSheets = async (formData: FormSubmission): Promise<bo
       formDataObj.append(key, value.toString());
     });
 
-    await fetch(url, {
+    const response = await fetch(url, {
       method: 'POST',
       mode: 'no-cors',
       body: formDataObj
     });
 
+    console.log('Ответ Google Sheets получен');
     return true; // no-cors режим всегда возвращает opaque response
   } catch (error) {
     console.error('Ошибка отправки в Google Sheets:', error);
