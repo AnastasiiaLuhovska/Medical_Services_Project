@@ -1,4 +1,4 @@
-const url = process.env.NEXT_PUBLIC_SCRIPT
+const url = process.env.NEXT_PUBLIC_SCRIPT_URL
 
 
 export interface FormSubmission {
