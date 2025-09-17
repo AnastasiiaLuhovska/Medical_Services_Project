@@ -49,16 +49,15 @@ export default function Home({ locale }: HomeProps) {
         <meta name="description" content={meta.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
-        {/* Open Graph tags */}
+
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://yourdomain.com${meta.url}`} />
-        
-        {/* Canonical URL */}
+
         <link rel="canonical" href={`https://yourdomain.com${meta.url}`} />
         
-        {/* Hreflang tags for SEO */}
+
         <link rel="alternate" hrefLang="de" href="https://yourdomain.com/" />
         <link rel="alternate" hrefLang="ru" href="https://yourdomain.com/ru" />
         <link rel="alternate" hrefLang="en" href="https://yourdomain.com/en" />
