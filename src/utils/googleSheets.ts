@@ -1,5 +1,5 @@
 const url = process.env.NEXT_PUBLIC_SCRIPT
-console.log(url)
+
 
 export interface FormSubmission {
   name: string;
