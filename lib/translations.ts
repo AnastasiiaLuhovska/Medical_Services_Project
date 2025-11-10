@@ -10,7 +10,7 @@ export const translations = {
     'nav.services': 'Leistungen',
     'nav.prices': 'Preise',
     'nav.contact': 'Kontakt',
-    'nav.appointment': 'Termin buchen',
+    'nav.appointment': 'Termin',
 
     // Hero Section
     'hero.title': 'Schnell & zuverlässig einen Termin sichern',
