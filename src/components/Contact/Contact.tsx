@@ -93,7 +93,7 @@ const Contact = () => {
                 </p>
                 <div className={styles.ctaButtons}>
                   <a 
-                    href="tel:+4917684727849" 
+                    href="tel:+49 176 847 27 849" 
                     className={`btn btn-primary ${styles.ctaBtn}`}
                   >
                     {t('contact.callNow')}
