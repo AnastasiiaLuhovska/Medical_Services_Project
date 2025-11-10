@@ -10,7 +10,7 @@ const Contact = () => {
       type: 'phone',
       title: t('contact.phone'),
       details: [
-        '+49 17684727849'
+        '+49 176 847 278 49'
       ],
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
