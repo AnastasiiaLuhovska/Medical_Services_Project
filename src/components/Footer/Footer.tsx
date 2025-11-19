@@ -33,14 +33,14 @@ const Footer = () => {
             <div className={styles.contactInfo}>
               <p className={styles.contactItem}>
                 <span className={styles.contactLabel}>Telefon:</span>
-                <a href="tel:+4917684727849" className={styles.contactLink}>
-                  +49 176 84727849
+                <a href="tel: +4917684727849" className={styles.contactLink}>
+                 &nbsp; +49 176 847 27 849
                 </a>
               </p>
               <p className={styles.contactItem}>
                 <span className={styles.contactLabel}>Email:</span>
                 <a href="mailto:medizinischeassistenzlue@gmail.com" className={styles.contactLink}>
-                  medizinischeassistenzlue@gmail.com
+                   &nbsp; medizinischeassistenzlue@gmail.com
                 </a>
               </p>
             </div>

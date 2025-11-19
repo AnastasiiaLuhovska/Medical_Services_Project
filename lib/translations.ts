@@ -14,7 +14,7 @@ export const translations = {
 
     // Hero Section
     'hero.title': 'Schnell & zuverlässig einen Termin sichern',
-    'hero.subtitle': 'wir unterstützen Sie in allen medizinischen Angelegenheiten in Deutschland.',
+    'hero.subtitle': 'wir unterstützen Sie in allen medizinischen Angelegenheiten  in Deutschland.',
     'hero.description': 'Wenn Sie Schwierigkeiten haben, einen Termin zu bekommen – wir machen es möglich, oft innerhalb von wenigen Tagen.',
     'hero.services': 'Leistungen',
     'hero.appointment': 'Termin buchen',
@@ -59,7 +59,7 @@ export const translations = {
     'services.service3.description': 'Wir helfen Ihnen beim korrekten und vollständigen Ausfüllen des Patientenbogens, damit keine Missverständnisse entstehen.',
     'services.service4.title': 'Ausfüllen eines Antrags',
     'services.service4.description': 'Unterstützung beim ersten Termin: Formulare, Begleitung, Übersetzung.',
-    'services.service5.title': 'Notfall-Begleitung (Krankenhaus, Notaufnahme)',
+    'services.service5.title': 'Notfall-Begleitung (Krankenhaus, Notaufnahme)*',
     'services.service5.description': 'Wir kommen im Notfall mit und übersetzen die Gespräche mit Ärzten.',
     'services.service6.title': 'Hausarzt finden',
     'services.service6.description': 'Wir helfen, einen guten Familienarzt (Hausarzt) für Ihre individuellen Bedürfnisse zu finden.',
@@ -91,7 +91,7 @@ export const translations = {
     'appointment.email': 'E-Mail-Adresse',
     'appointment.emailPlaceholder': 'ihre.email@beispiel.de',
     'appointment.phone': 'Telefonnummer',
-    'appointment.phonePlaceholder': '+49 176 84727849',
+    'appointment.phonePlaceholder': '+49 176 847 278 49',
     'appointment.date': 'Gewünschtes Datum',
     'appointment.time': 'Gewünschte Uhrzeit',
     'appointment.timePlaceholder': 'Uhrzeit wählen',
@@ -138,7 +138,7 @@ export const translations = {
     'footer.newsletter': 'Newsletter',
     'footer.newsletterPlaceholder': 'Ihre E-Mail-Adresse eingeben',
     'footer.subscribe': 'Abonnieren',
-    'footer.copyright': '© 2024 Medizinische Assistenz. Alle Rechte vorbehalten.',
+    'footer.copyright': '© 2026 Medizinische Assistenz. Alle Rechte vorbehalten.',
   },
   ru: {
     // Brand
@@ -153,8 +153,8 @@ export const translations = {
 
     // Hero Section
     'hero.title': 'Быстро и надежно записаться к врачу',
-    'hero.subtitle': 'мы поддержим вас во всех медицинских вопросах в Германии.',
-    'hero.description': 'Если у вас есть трудности с записью к врачу – мы сделаем это возможным, часто в течение нескольких дней.',
+    'hero.subtitle': 'Мы окажем вам всестороннюю поддержку по всем медицинским вопросам в Баварии и всей Германии.',
+    'hero.description': 'Если у вас возникают трудности с записью к врачу, мы организуем приём — часто уже в течение нескольких дней.',
     'hero.services': 'Услуги',
     'hero.appointment': 'Записаться',
     'hero.ctaTitle': 'Готовы записаться на приём?',
@@ -166,14 +166,14 @@ export const translations = {
     // About Section
     'about.title': 'О нас',
     'about.subtitle': 'Ваш медицинский ассистент',
-    'about.description': 'Мы ваш надежный партнер во всех медицинских вопросах в Германии. Мы поддерживаем вас в записи на прием, организации, документообороте и общении с врачами и клиниками. Наша сильная сторона - объяснять сложные процессы просто и понятно, сопровождая вас шаг за шагом.',
+    'about.description': 'Мы - ваш надёжный партнёр во всех медицинских вопросах не только в Мюнхене, Берлине, Франкфурте, Гамбурге, Кельне но и в других городах Германии. Мы поддерживаем вас в записи на прием, организации, документообороте и общении с врачами и клиниками. Наша сильная сторона - объяснять сложные процессы просто и понятно, сопровождая вас шаг за шагом.',
     'about.feature1': 'Надежность и конфиденциальность',
     'about.feature1.description': 'Ваши личные данные и медицинская информация в безопасности у нас.',
-    'about.feature2': 'Медицинские знания',
+    'about.feature2': 'Профессиональные медицинские знания',
     'about.feature2.description': 'Многолетний опыт работы в немецкой системе здравоохранения.',
-    'about.feature3': 'Личное сопровождение и поддержка',
+    'about.feature3': 'Личная поддержка и сопровождение ',
     'about.feature3.description': 'Мы сопровождаем вас на каждый прием и переводим все для вас.',
-    'about.feature4': 'Опыт работы с документами и заявлениями',
+    'about.feature4': 'Многолетний опыт работы с документами и заявлениями',
     'about.feature4.description': 'Помощь с комплексными формами и заявлениями всех видов.',
     'about.feature5': 'Дружелюбное и понятное общение',
     'about.feature5.description': 'Мы объясняем все понятно и находим время для вас.',
@@ -189,23 +189,23 @@ export const translations = {
 
     // Services Section
     'services.title': 'Наши услуги',
-    'services.subtitle': 'мы здесь для вас',
+    'services.subtitle': 'Мы здесь, чтобы сделать медицину в Германии для вас доступной .',
     'services.service1.title': 'Запись к врачу',
-    'services.service1.description': 'Мы организуем срочные медицинские записи – даже тогда, когда сложно быстро получить запись.',
+    'services.service1.description': 'Мы организуем срочные приёмы у врачей по всей Германии – даже тогда, когда сложно быстро получить запись.',
     'services.service2.title': 'Устный перевод',
-    'services.service2.description': 'Медицинские термины, врачебные письма или беседы – мы обеспечиваем ясный и правильный перевод.',
+    'services.service2.description': 'Мы гарантируем профессиональный и точный перевод медицинских терминов, врачебных писем и разговоров с врачами.',
     'services.service3.title': 'Заполнение анкеты пациента',
-    'services.service3.description': 'Мы помогаем правильно и полно заполнить анкету пациента, чтобы избежать недоразумений.',
+    'services.service3.description': 'Мы помогаем вам правильно и полностью заполнить анкету пациента, чтобы избежать недоразумений.',
     'services.service4.title': 'Заполнение заявления',
-    'services.service4.description': 'Поддержка при первом приеме: формы, сопровождение, перевод.',
-    'services.service5.title': 'Экстренное сопровождение',
-    'services.service5.description': 'Мы приходим в экстренных случаях и переводим разговоры с врачами.',
+    'services.service4.description': 'Мы поможем вам на первом приёме: заполним формы, сопроводим и переведём.',
+    'services.service5.title': 'Экстренное сопровождение*',
+    'services.service5.description': 'Мы выезжаем в экстренных случаях и обеспечиваем перевод во время общения с врачами',
     'services.service6.title': 'Поиск семейного врача',
     'services.service6.description': 'Мы помогаем найти хорошего семейного врача (домашнего врача) для ваших индивидуальных потребностей.',
-    'services.service7.title': 'Предварительные беседы перед операциями',
-    'services.service7.description': 'Перевод и поддержка при важных медицинских беседах перед операциями.',
+    'services.service7.title': 'Предварительные консультации перед операциями',
+    'services.service7.description': 'Мы обеспечиваем перевод и сопровождаем вас при ключевых консультациях перед операциями.',
     'services.service8.title': 'Телефонное общение',
-    'services.service8.description': 'Мы берем на себя звонки врачам, клиникам или ведомствам – профессионально и надежно.',
+    'services.service8.description': 'Мы берем на себя звонки врачам, клиникам или ведомствам – профессионально, быстро и надежно.',
     'services.learnMore': 'Подробнее',
 
     // Prices Section
@@ -221,7 +221,7 @@ export const translations = {
     'prices.hausarzt': '€20,00',
     'prices.vorgespraeche': '€50,00',
     'prices.telefonisch': '€4,00',
-    'prices.note': 'СПОСОБ ОПЛАТЫ: Банковский перевод, Наличные',
+    'prices.note': 'СПОСОБ ОПЛАТЫ: Банковский перевод или наличные',
 
     // Appointment Form
     'appointment.title': 'Записаться',
@@ -230,12 +230,12 @@ export const translations = {
     'appointment.email': 'Электронная почта',
     'appointment.emailPlaceholder': 'ваша.почта@пример.com',
     'appointment.phone': 'Номер телефона',
-    'appointment.phonePlaceholder': '+49 176 84727849',
+    'appointment.phonePlaceholder': '+49 176 847 278 49',
     'appointment.date': 'Желаемая дата',
     'appointment.time': 'Желаемое время',
     'appointment.timePlaceholder': 'Выберите время',
     'appointment.message': 'Сообщение',
-    'appointment.messagePlaceholder': 'Опишите ваш вопрос или задайте вопросы...',
+    'appointment.messagePlaceholder': 'Опишите ваш запрос или задайте вопросы...',
     'appointment.submit': 'ОТПРАВИТЬ ЗАПРОС',
     'appointment.submitting': 'ОТПРАВЛЯЕТСЯ...',
     
@@ -277,7 +277,7 @@ export const translations = {
     'footer.newsletter': 'Новости',
     'footer.newsletterPlaceholder': 'Введите ваш email',
     'footer.subscribe': 'Подписаться',
-    'footer.copyright': '© 2024 Медицинский Ассистент. Все права защищены.',
+    'footer.copyright': '© 2026 Медицинский Ассистент. Все права защищены.',
   },
   en: {
     // Brand
@@ -337,7 +337,7 @@ export const translations = {
     'services.service3.description': 'We help you correctly and completely fill out patient forms to avoid misunderstandings.',
     'services.service4.title': 'Application completion',
     'services.service4.description': 'Support for the first appointment: forms, accompaniment, translation.',
-    'services.service5.title': 'Emergency accompaniment',
+    'services.service5.title': 'Emergency accompaniment*',
     'services.service5.description': 'We come in emergencies and translate conversations with doctors.',
     'services.service6.title': 'Find family doctor',
     'services.service6.description': 'We help find a good family doctor (general practitioner) for your individual needs.',
@@ -369,7 +369,7 @@ export const translations = {
     'appointment.email': 'Email address',
     'appointment.emailPlaceholder': 'your.email@example.com',
     'appointment.phone': 'Phone number',
-    'appointment.phonePlaceholder': '+49 176 84727849',
+    'appointment.phonePlaceholder': '+49 176 847 278 49',
     'appointment.date': 'Preferred date',
     'appointment.time': 'Preferred time',
     'appointment.timePlaceholder': 'Select time',
@@ -401,8 +401,8 @@ export const translations = {
 
     // Contact Section
     'contact.title': 'Contact us',
-    'contact.phone': 'Phone',
-    'contact.email': 'Email',
+    'contact.phone': 'Phone ',
+    'contact.email': 'Email ',
     'contact.getDirections': 'Get in touch',
     'contact.ctaTitle': 'Need help?',
     'contact.ctaDescription': 'Contact us for a free consultation. We are happy to help you with all medical matters.',
@@ -416,7 +416,7 @@ export const translations = {
     'footer.newsletter': 'Newsletter',
     'footer.newsletterPlaceholder': 'Enter your email address',
     'footer.subscribe': 'Subscribe',
-    'footer.copyright': '© 2024 Medical Assistant. All rights reserved.',
+    'footer.copyright': '© 2026 Medical Assistant. All rights reserved.',
   }
 }
 
